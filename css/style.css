@@ -1,0 +1,47 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1.4rem;
+  margin: 0.1em;
+  padding: 0.1em;
+}
+
+h1 {
+  background: #FFFFEE;
+  border-left: solid 15px #FF9900;
+  border-bottom: solid 3px #CCCCCC;
+}
+
+h2 {
+  border-left: solid 20px #FF9900;
+}
+
+.guide_area{
+  background: pink;
+  position: fixed;
+  margin-left: 0px;
+  padding-left: 30px;
+  top: -25px;
+  left: 0px;
+  width: 100%;
+}
+
+.code01 {
+  background: #EEEEEE;
+  border-left: solid 10px #999999;
+  border-bottom: solid 3px #CCCCCC;
+}
+
+.w300 {
+  width: 300px;
+}
+
+.w500 {
+  width: 500px;
+}
+
+.image01 {
+  border-radius: 50%;
+}
