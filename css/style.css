@@ -30,8 +30,7 @@ h2 {
   width: 100%;
   background-color: gray;
   padding: 0px;
-  margin-left: -10px;
-  margin-bottom: -5px;
+  margin: 10px 10px -5px -10px; 
   text-align: center;
 }
 
@@ -48,8 +47,13 @@ h2 {
   background: #EEEEEE;
   border-left: solid 10px #999999;
   border-bottom: solid 3px #CCCCCC;
+  padding: 0px;
 }
 
+.test {
+  padding: 0px;
+  margin: 0px;
+}
 .w300 {
   width: 300px;
 }
