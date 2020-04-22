@@ -16,6 +16,13 @@ h2 {
   border-left: solid 20px #FF9900;
 }
 
+table {
+  border: solid 1px black;
+}
+td {
+  border: solid 1px black;
+}
+
 .guide_area {
   position: fixed;
   width: 100%;
@@ -30,7 +37,7 @@ h2 {
   width: 100%;
   background-color: gray;
   padding: 0px;
-  margin: 10px 10px -5px -10px; 
+  margin: 10px 10px -5px -10px;
   text-align: center;
 }
 
