@@ -4,8 +4,6 @@ html {
 
 body {
   font-size: 1.4rem;
-  margin: 0.1em;
-  padding: 0.1em;
 }
 
 h1 {
@@ -18,14 +16,32 @@ h2 {
   border-left: solid 20px #FF9900;
 }
 
-.guide_area{
-  background: pink;
+.guide_area {
   position: fixed;
-  margin-left: 0px;
-  padding-left: 30px;
-  top: -25px;
-  left: 0px;
   width: 100%;
+  background-color: white;
+  margin-top: -25px;
+  padding-top: 10px;
+}
+
+.guide_area_bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  padding: 0px;
+  margin-left: -10px;
+  margin-bottom: -5px;
+  text-align: center;
+}
+
+.guide_area_content {
+  margin: 0px;
+  padding: 0px;
+}
+
+.base_position {
+  padding-top: 80px;
 }
 
 .code01 {
