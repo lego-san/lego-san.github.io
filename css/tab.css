@@ -1,0 +1,48 @@
+.tabs {
+  padding-bottom: 40px;
+}
+
+.tab_item {
+  width: calc(100%/3);
+  height: 50px;
+  background-color: #DDDDDD;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #555555;
+  display: block;
+  float: left;
+  font-weight: bold;
+  transition: all 0.2s ease;
+
+}
+
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+input[name="tab_item"] {
+  display: none;
+}
+
+.tab_content {
+  display: none;
+  padding: 0px 10px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+#ID_PICTURES:checked ~ #ID_PICTURES_CONTENTS {
+  display: block;
+}
+#ID_ANIMATIONS:checked ~ #ID_ANIMATIONS_CONTENTS {
+  display: block;
+}
+#ID_HP:checked ~ #ID_HP_CONTENT {
+  display: block;
+}
+
+.tabs input:checked + .tab_item {
+  background-color: #FF0000;
+  color: #FFFF00;
+}
