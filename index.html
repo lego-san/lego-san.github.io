@@ -43,30 +43,25 @@
         <div class="tab_content" id="ID_PICTURES_CONTENTS">
           <div class="tab_content_description">
             <h2>レゴ写真館</h2>
-            <div class="flex_contents_area">
-              <div class="flex_content_area30">
-                <img width=100% src="./images/親子01.jpg" alt="親子写真">
-              </div>
-              <div class="flex_content_area70">
-                <p id="ID_P_TAB">レゴフレンズのエマとレゴディズニーのエリック君です。</p>
-              </div>
-            </div>
-            <div class="flex_contents_area">
-              <div class="flex_content_area30">
-                <img width=100% src="./images/トイストーリー01.jpg" alt="トイストーリ">
-              </div>
-              <div class="flex_content_area70">
-                <p>レゴディズニーのウッディー君とバズ君です。</p>
-              </div>
-            </div>
-            <div class="flex_contents_area">
-              <div class="flex_content_area30">
-                <img width=100% src="./images/泥棒と警察01.jpg" alt="泥棒と警察">
-              </div>
-              <div class="flex_content_area70">
-                <p>警察と逃げる泥棒です。</p>
-              </div>
-            </div>
+            <table width=100%>
+              <tbody>
+                <tr>
+                  <th width=30%></th><th></th>
+                </tr>
+                <tr>
+                  <td><img width=100% src="./images/親子01.jpg" alt="親子写真"></td>
+                  <td id="ID_TD">レゴフレンズのエマとレゴディズニーのエリック君です。</td>
+                </tr>
+                <tr>
+                  <td><img width=100% src="./images/トイストーリー01.jpg" alt="トイストーリー"></td>
+                  <td>レゴディズニーのウッディー君とバズ君です。</td>
+                </tr>
+                <tr>
+                  <td><img width=100% src="./images/泥棒と警察01.jpg" alt="泥棒と警察"></td>
+                  <td>警察と逃げる泥棒です。</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -74,11 +69,33 @@
           <div class="tab_content_description">
             <h2>レゴアニメーション</h2>
             <p>ストップアニメーションと呼ばれている静止画をつなげて作ったアニメーションです。</p>
-            <div class="flex_contents_area">
-              <div class="flex_content_area70">
-                <img width=100% src="./images/タケコプター01.gif" alt="タケコプター">
-              </div>
-            </div>
+            <table width=100%>
+              <tbody>
+                <tr>
+                  <th width=50%></th><th></th>
+                </tr>
+                <tr>
+                  <td><img width=100% src="./images/フェイス01.gif" alt="フェイス"></td>
+                  <td>レゴフェイス</td>
+                </tr>
+                <tr>
+                  <td><img width=100% src="./images/タケコプター01.gif" alt="タケコプター少年"></td>
+                  <td>タケコプター少年</td>
+                </tr>
+                <tr>
+                  <td><img width=100% src="./images/シンデレラ01.gif" alt="シンデレラ"></td>
+                  <td>シンデレラ</td>
+                </tr>
+                <tr>
+                  <td><img width=100% src="./images/ドラゴンボート01.gif" alt="ドラゴンボート"></td>
+                  <td>ドラゴンボートレース</td>
+                </tr>
+                <tr>
+                  <td><img width=100% src="./images/強風01.gif" alt="強風"></td>
+                  <td>強風</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -111,7 +128,7 @@
         <script defer>
           var id = "ID_NOTE1";
           var titles = ["tag", "font-size", "height", "font-weight", "border", "width", "margin", "padding"];
-          var targets = ["ID_HTML", "ID_BODY", "ID_TITLE", "ID_P", "ID_TAB_NAME", "ID_P_TAB"];
+          var targets = ["ID_HTML", "ID_BODY", "ID_TITLE", "ID_P", "ID_TAB_NAME", "ID_TD"];
           check_property(id, titles, targets);
         </script>
       </div>
