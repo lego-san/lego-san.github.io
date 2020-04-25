@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html id="ID_HTML" lang="en" dir="ltr">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164123953-2"></script>
     <script>
@@ -10,57 +10,115 @@
     </script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/tab.css">
+    <script type="text/javascript" src="./js/style.js"></script>
     <meta charset="utf-8">
     <title>レゴで遊んで学ぶ</title>
   </head>
-  <body>
-    <div class="guide_area">
-      <h1 class="guide_area_content" id="ID_TITLE">レゴで遊ぼう、学ぼう</h1>
+  <body id="ID_BODY">
+    <div class="top_area">
+      <h1 class="page_title" id="ID_TITLE">レゴで遊ぼう、学ぼう</h1>
     </div>
-    <p id="ID_BASE" class="base_position">レゴは子供の知育にいいと言われています。
-      きっと、脳で考えたものを、指先を動かして創り上げていくからでしょう。</p>
-      <img class="w300" src="./images/先生03.jpg" alt="レゴの写真">
-    <p>このサイトは、レゴの作品やレゴで遊んでいるうちに学んだことを共有するページにしたいと思っています。
-    楽しんでいただければ幸いです。</p>
-    <hr>
-    <div id="ID_TABS" class="tabs">
-      <input id="ID_PICTURES" type="radio" name="tab_item" checked>
-      <label class="tab_item" for="ID_PICTURES">レゴ写真館</label>
-      <input id="ID_ANIMATIONS" type="radio" name="tab_item">
-      <label class="tab_item" for="ID_ANIMATIONS">レゴアニメーション</label>
-      <input id="ID_HP" type="radio" name="tab_item">
-      <label class="tab_item" for="ID_HP">HPの作り方</label>
-      <div class="tab_content" id="ID_PICTURES_CONTENTS">
-        <div class="tab_content_description">
-          <h2>レゴ写真館</h2>
-          <img class="w300" src="./images/親子01.jpg" alt="親子写真">
-          <img class="w300" src="./images/トイストーリー01.jpg" alt="トイストーリ">
-          <img class="w300" src="./images/泥棒と警察01.jpg" alt="泥棒と警察">
+    <div id="ID_CONTENTS" class="contents_area">
+      <div class="flex_contents_area">
+        <div class="flex_content_area30">
+          <img class="circle" width=100% src="./images/先生01.jpg" alt="レゴの写真">
+        </div>
+        <div class="flex_content_area70">
+          <p>レゴは子供の知育にいいと言われています。
+          きっと、脳で考えたものを、指先を動かして創り上げていくからでしょう。</p>
+          <p>このサイトは、レゴの作品やレゴで遊んでいるうちに学んだことを共有するページにしたいと思っています。
+          楽しんでいただければ幸いです。</p>
         </div>
       </div>
-      <div class="tab_content" id="ID_ANIMATIONS_CONTENTS">
-        <div class="tab_content_description">
-          <h2>レゴアニメーション</h2>
-          <p>ストップアニメーションと呼ばれている静止画をつなげて作ったアニメーションです。</p>
-          <img class="w300" src="./images/タケコプター01.gif" alt="タケコプター">
+      <hr>
+      <div id="ID_TABS" class="tabs">
+        <input id="ID_PICTURES" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="ID_PICTURES">レゴ写真館</label>
+        <input id="ID_ANIMATIONS" type="radio" name="tab_item">
+        <label class="tab_item" for="ID_ANIMATIONS">レゴアニメーション</label>
+        <input id="ID_HP" type="radio" name="tab_item">
+        <label class="tab_item" for="ID_HP">HPの作り方</label>
+
+        <div class="tab_content" id="ID_PICTURES_CONTENTS">
+          <div class="tab_content_description">
+            <h2>レゴ写真館</h2>
+            <div class="flex_contents_area">
+              <div class="flex_content_area30">
+                <img width=100% src="./images/親子01.jpg" alt="親子写真">
+              </div>
+              <div class="flex_content_area70">
+                <p>レゴフレンズのエマとレゴディズニーのエリック君です。</p>
+              </div>
+            </div>
+            <div class="flex_contents_area">
+              <div class="flex_content_area30">
+                <img width=100% src="./images/トイストーリー01.jpg" alt="トイストーリ">
+              </div>
+              <div class="flex_content_area70">
+                <p>レゴディズニーのウッディー君とバズ君です。</p>
+              </div>
+            </div>
+            <div class="flex_contents_area">
+              <div class="flex_content_area30">
+                <img width=100% src="./images/泥棒と警察01.jpg" alt="泥棒と警察">
+              </div>
+              <div class="flex_content_area70">
+                <p>警察と逃げる泥棒です。</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="tab_content" id="ID_HP_CONTENT">
-        <div class="tab_content_description">
-          <h2>レゴホームページの作り方</h2>
-          <p>本ホームページの作り方をまとめました。
-            ゼロから作り上げたその過程をお楽しみ頂ければと思います。</p>
-          <ol>
-            <li><a href="./contents/step01/index.html">まずはHTMLで文章を書いてみる</a></li>
-            <li><a href="./contents/step02/index.html">文字に色を付けてみる</a></li>
-            <li><a href="./contents/step03/index.html">色について学んでみる</a></li>
-            <li><a href="./contents/step04/index.html">文字サイズについて学んでみる</a></li>
-            <li><a href="./contents/step05/index.html">レイアウトについて学んでみる</a></li>
-          </ol>
-          <img class="w300 image01" src="./images/先生01.jpg" alt="先生">
+
+        <div class="tab_content" id="ID_ANIMATIONS_CONTENTS">
+          <div class="tab_content_description">
+            <h2>レゴアニメーション</h2>
+            <p>ストップアニメーションと呼ばれている静止画をつなげて作ったアニメーションです。</p>
+            <div class="flex_contents_area">
+              <div class="flex_content_area70">
+                <img width=100% src="./images/タケコプター01.gif" alt="タケコプター">
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="tab_content" id="ID_HP_CONTENT">
+          <div class="tab_content_description">
+            <h2>レゴホームページの作り方</h2>
+            <p>本ホームページの作り方をまとめました。
+              ゼロから作り上げたその過程をお楽しみ頂ければと思います。</p>
+            <div class="flex_contents_area">
+              <div class="flex_content_area30">
+                <img width=100% src="./images/先生02.jpg" alt="先生">
+              </div>
+              <div class="flex_content_area70">
+                <ol>
+                  <li><a href="./contents/step01/index.html">まずはHTMLで文章を書いてみる</a></li>
+                  <li><a href="./contents/step02/index.html">文字に色を付けてみる</a></li>
+                  <li><a href="./contents/step03/index.html">色について学んでみる</a></li>
+                  <li><a href="./contents/step04/index.html">文字サイズについて学んでみる</a></li>
+                  <li><a href="./contents/step05/index.html">レイアウトについて学んでみる</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <hr>
+      <h2>このページの設定</h2>
+      <div id="ID_NOTE1">
+        <script>
+          var id = "ID_NOTE1";
+          var titles = ["tag", "font-size", "height", "font-weight", "border", "width", "margin", "padding"];
+          var targets = ["ID_HTML", "ID_BODY", "ID_TITLE"];
+          check_property(id, titles, targets);
+        </script>
+      </div>
+
     </div>
-    <p class="guide_area_bottom">[<a href="#ID_BASE">TOPに戻る</a>]</p>
+
+    <br><br>
+    <p class="guide_area_bottom">[<a href="#ID_CONTENTS">TOPに戻る</a>]</p>
   </body>
 </html>
