@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <title>HTMLでGIFアニメーションを表示する</title>
+    <style media="screen">
+      table{
+        width: 50%;
+      }
+      td{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">GIFアニメーションを張り付けてみる</h1>
+    <p>今回はGifアニメーションに挑戦します。</p>
+    <h2 id="ID_CONTENTS">目次</h2>
+    <ol>
+      <li><a href="#ID_H2_01">アニメーションのベースファイル</a></li>
+      <li><a href="#ID_H2_02">Gifアニメーションの作成</a></li>
+      <li><a href="#ID_H2_03">Gif画像の貼り付け方</a></li>
+      <li><a href="#ID_H2_04">2フレームGifと4フレームGif</a></li>
+      <li><a href="#ID_SRC">今回作成したページのHTMLコード</a></li>
+    </ol>
+
+    <h2 id="ID_H2_01">アニメーションのベースファイル</h2>
+    <p>今回使うのはこちらの2つの画像ファイルです。</p>
+    <table>
+      <tbody>
+        <tr>
+          <th>frame0</th>
+          <th>frame1</th>
+        </tr>
+        <tr>
+          <td><img style="width:100%;" src="./images/frame-00000.jpg" alt="frame0"></td>
+          <td><img style="width:100%;" src="./images/frame-00001.jpg" alt="frame1"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="ID_H2_02">アニメーションの作成</h2>
+    <p>今回のGif画像はスマホアプリで作成しました。"gif アプリ"で検索すれば色々出てきますのでお試しください。</p>
+    <img style="width:30%;" src="./images/テストファイルx2_1.gif" alt="gif">
+
+    <h2 id="ID_H2_03">Gif画像の貼り付け方</h2>
+    <p>静止画と同じでした。</p>
+    <pre class="code01"><code><br> &lt;img src="サンプル画像.gif" alt="サンプル画像"&gt;
+    </code></pre>
+    <img style="width:20%;" src="./images/テストファイルx2_1.gif" alt="gif">
+
+    <h2 id="ID_H2_04">2フレームGifと4フレームGif</h2>
+    <p>試しに2フレームで構成されるGif画像と4フレームで構成されるGif画像を作ってみました。</p>
+    <table>
+      <tbody>
+        <tr>
+          <th>2frame</th>
+          <th>4frame</th>
+        </tr>
+        <tr>
+          <td><img style="width:100%;" src="./images/テストファイルx2_1.gif" alt="testfile1"></td>
+          <td><img style="width:100%;" src="./images/テストファイルx4_2.gif" alt="testfile2"></td>
+        </tr>
+        <tr>
+          <td>242KB</td>
+          <td>484KB</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>ファイル容量は違いますけど、動きに差はないですね。。。あたりまえでしたね。</p>
+
+    <h2 id="ID_SRC">今回作成したページのHTMLコード</h2>
+    <p>実際に作成したページは<a href="./step07.html">こちら</a></p>
+    <img width=300px src="../../../images/先生02.jpg" alt="こちら">
+    <p>HTMLコードは<a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/html/step07/step07.html">こちら</a></p>
+
+    <h2>感想</h2>
+    <p>HTMLでの表示の仕方は、静止画とGifで違いはありませんでした。</p>
+
+    <div>
+      <hr><br><br>
+      <p class="guide_area_bottom">[<a href="#ID_TITLE">ページ上に戻る</a>] / [<a href="#ID_CONTENTS">目次に戻る</a>] / [<a href="../../../index.html">HOMEへ戻る</a>]</p>
+    </div>
+
+  </body>
+</html>

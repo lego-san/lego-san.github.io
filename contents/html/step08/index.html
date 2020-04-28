@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <title>HTMLのvideoタグの使い方</title>
+    <style media="screen">
+      table {
+        width: 50%;
+      }
+      video {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">MP4を再生してみる</h1>
+    <h2 id="ID_CONTENTS">目次</h2>
+    <ol>
+      <li><a href="#ID_H2_01">MP4の再生方法</a></li>
+      <li><a href="#ID_H2_02">操作パネルの表示</a></li>
+      <li><a href="#ID_H2_03">ビデオの自動再生</a></li>
+      <li><a href="#ID_H2_04">ビデオのループ再生</a></li>
+      <li><a href="#ID_H2_05">ビデオのインライン再生</a></li>
+      <li><a href="#ID_SRC">今回作成したページのHTMLコード</a></li>
+    </ol>
+
+    <h2 id="ID_H2_01">MP4の再生方法</h2>
+    <p>HTML上でのMP4を再生はvideoタグを使えばいいようです。</p>
+    <pre class="code01"><code><br> &lt;video src="./images/サンプル動画.mp4"&gt;&lt;/video&gt;
+    </code></pre>
+    <table>
+      <tbody>
+        <tr>
+          <th>ビデオ再生</th>
+        </tr>
+        <tr>
+          <td><video src="./images/テストファイル.mp4"></video></td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="ID_H2_02">操作パネルの表示</h2>
+    <p>ビデオの操作パネルはcontrolsを記載すればいいようです。</p>
+    <pre class="code01"><code><br> &lt;video src="./images/サンプル動画.mp4" controls&gt;&lt;/video&gt;
+    </code></pre>
+    <table>
+      <tbody>
+        <tr>
+          <th>ビデオ再生(操作パネルあり)</th>
+        </tr>
+        <tr>
+          <td><video src="./images/テストファイル.mp4" controls></video></td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="ID_H2_03">ビデオの自動再生</h2>
+    <p>ビデオを自動再生するにはautoplayを記載すればいいようです。</p>
+    <pre class="code01"><code><br> &lt;video src="./images/サンプル動画.mp4" controls autoplay&gt;&lt;/video&gt;
+    </code></pre>
+    <table>
+      <tbody>
+        <tr>
+          <th>ビデオ再生(自動再生あり)</th>
+        </tr>
+        <tr>
+          <td><video src="./images/テストファイル.mp4" controls autoplay></video></td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="ID_H2_04">ビデオのループ再生</h2>
+    <p>ビデオをループ再生するにはloopを記載すればいいようです。</p>
+    <pre class="code01"><code><br> &lt;video src="./images/サンプル動画.mp4" controls autoplay loop&gt;&lt;/video&gt;
+    </code></pre>
+    <table>
+      <tbody>
+        <tr>
+          <th>ビデオ再生(ループ再生あり)</th>
+        </tr>
+        <tr>
+          <td><video src="./images/テストファイル.mp4" controls autoplay loop></video></td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="ID_H2_05">ビデオのインライン再生</h2>
+    <p>ビデオをインラインで再生するにはplaysinlineを記載すればいいようです。</p>
+    <pre class="code01"><code><br> &lt;video src="./images/サンプル動画.mp4" controls autoplay loop playsinline&gt;&lt;/video&gt;
+    </code></pre>
+    <table>
+      <tbody>
+        <tr>
+          <th>ビデオ再生(インライン再生)</th>
+        </tr>
+        <tr>
+          <td><video src="./images/テストファイル.mp4" controls autoplay loop playsinline></video></td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="ID_SRC">今回作成したページのHTMLコード</h2>
+    <p>実際に作成したページは<a href="./step08.html">こちら</a></p>
+    <img width=300px src="../../../images/先生02.jpg" alt="こちら">
+    <p>HTMLコードは<a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/html/step08/step08.html">こちら</a></p>
+
+    <h2>感想</h2>
+    <p>動画の再生ができるようになりました。あとは動画のコンテンツを整えないといけませんね。</p>
+
+    <div>
+      <hr><br><br>
+      <p class="guide_area_bottom">[<a href="#ID_TITLE">ページ上に戻る</a>] / [<a href="#ID_CONTENTS">目次に戻る</a>] / [<a href="../../../index.html">HOMEへ戻る</a>]</p>
+    </div>
+
+  </body>
+</html>

@@ -12,7 +12,7 @@ h2 {
   border-left: solid 20px #FF9900;
 }
 
-table, td {
+table, th, td {
   border: solid 1px black;
 }
 
