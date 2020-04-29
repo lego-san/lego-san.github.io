@@ -22,6 +22,7 @@
       <li><a href="#ID_H2_03">ビデオの自動再生</a></li>
       <li><a href="#ID_H2_04">ビデオのループ再生</a></li>
       <li><a href="#ID_H2_05">ビデオのインライン再生</a></li>
+      <li><a href="#ID_H2_06">スマホ向けの注意点</a></li>
       <li><a href="#ID_SRC">今回作成したページのHTMLコード</a></li>
     </ol>
 
@@ -96,6 +97,22 @@
         </tr>
         <tr>
           <td><video src="./images/テストファイル.mp4" controls autoplay loop playsinline></video></td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="ID_H2_06">スマホ向けの注意点</h2>
+    <p>作成したページをスマホで見てみると、実は動画が動いていませんでした。消音オプションがないとダメらしいです。</p>
+    <p>ということで、消音オプションのmutedをつけておきます。</p>
+    <pre class="code01"><code><br> &lt;video src="./images/サンプル動画.mp4" controls autoplay loop playsinline muted&gt;&lt;/video&gt;
+    </code></pre>
+    <table>
+      <tbody>
+        <tr>
+          <th>ビデオ再生(スマホ向け)</th>
+        </tr>
+        <tr>
+          <td><video src="./images/テストファイル.mp4" controls autoplay loop playsinline muted></video></td></td>
         </tr>
       </tbody>
     </table>
