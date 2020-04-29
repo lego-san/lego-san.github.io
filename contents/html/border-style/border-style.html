@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <meta property="og:type" content="article">
+    <title>HTMLのborder-styleの使い方</title>
+    <style media="screen">
+      p {width: 50%; padding: 10px;}
+      p.dotted {border-style: dotted;}
+      p.dashed {border-style: dashed;}
+      p.solid {border-style: solid;}
+      p.double {border-style: double;}
+      p.groove {border-style: groove;}
+      p.ridge {border-style: ridge;}
+      p.inset {border-style: inset;}
+      p.outset {border-style: outset;}
+      p.none {border-style: none;}
+      p.hidden {border-style: hidden;}
+      p.mix {border-style: dotted dashed solid double;}
+    </style>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">いろんな種類の枠線を使ってみる</h1>
+    <h2 id="ID_CONTENTS">目次</h2>
+    <ol>
+      <li><a href="#ID_H2_01">HTMLで表現できる枠線</a></li>
+      <li><a href="#ID_H2_02">各枠線の設定方法(直接変更)</a></li>
+      <li><a href="#ID_H2_03">各枠線の設定方法(Style)</a></li>
+      <li><a href="#ID_SRC">今回作成したページのHTMLコード</a></li>
+    </ol>
+
+    <h2 id="ID_H2_01">HTMLで表現できる枠線</h2>
+    <p class="dotted">border-style: dotted;</p>
+    <p class="dashed">border-style: dashed;</p>
+    <p class="solid">border-style: solid;</p>
+    <p class="double">border-style: double;</p>
+    <p class="groove">border-style: groove;</p>
+    <p class="ridge">border-style: ridge;</p>
+    <p class="inset">border-style: inset;</p>
+    <p class="outset">border-style: outset;</p>
+    <p class="none">border-style: none;</p>
+    <p class="hidden">border-style: hidden;</p>
+    <p class="mix">border-style: dotted dashed solid double;</p>
+
+
+    <h2 id="ID_H2_02">各枠線の設定方法(直接変更)</h2>
+    <pre class="code01"><code>
+  &lt;p style="border-style: dotted;"&gt;border-style: dotted;&lt;/p&gt;
+  &lt;p style="border-style: dashed;"&gt;border-style: dashed;&lt;/p&gt;
+  &lt;p style="border-style: solid;"&gt;border-style: solid;&lt;/p&gt;
+  &lt;p style="border-style: double;"&gt;border-style: double;&lt;/p&gt;
+  &lt;p style="border-style: groove;"&gt;border-style: groove;&lt;/p&gt;
+  &lt;p style="border-style: ridge;"&gt;border-style: ridge;&lt;/p&gt;
+  &lt;p style="border-style: inset;"&gt;border-style: inset;&lt;/p&gt;
+  &lt;p style="border-style: outset;"&gt;border-style: outset;&lt;/p&gt;
+  &lt;p style="border-style: none;"&gt;border-style: none;&lt;/p&gt;
+  &lt;p style="border-style: hidden;"&gt;border-style: hidden;&lt;/p&gt;
+  &lt;p style="border-style: mix;"&gt;border-style: dotted dashed solid double;&lt;/p&gt;
+    </code></pre>
+
+
+    <h2 id="ID_H2_03">各枠線の設定方法(Style)</h2>
+    <pre class="code01"><code>
+&lt;head&gt;
+  &lt;style media="screen"&gt;
+    p.dotted {border-style: dotted;}
+    p.dashed {border-style: dashed;}
+    p.solid {border-style: solid;}
+    p.double {border-style: double;}
+    p.groove {border-style: groove;}
+    p.ridge {border-style: ridge;}
+    p.inset {border-style: inset;}
+    p.outset {border-style: outset;}
+    p.none {border-style: none;}
+    p.hidden {border-style: hidden;}
+    p.mix {border-style: dotted dashed solid double;}
+  &lt;/style&gt;
+&lt;/head&gt;
+    </code></pre>
+
+    <h2 id="ID_SRC">今回作成したページのHTMLコード</h2>
+    <p>実際に作成したページは<a href="../step/step10.html">こちら</a></p>
+    <img style="width:300px;" src="../../../images/先生02.jpg" alt="こちら">
+    <p>HTMLコードは<a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/html/step/step10.html">こちら</a></p>
+
+    <h2>感想</h2>
+    <p>今回はなかなか大変でした。でも枠線を工夫することでページが華やかになりそうです。</p>
+
+    <div>
+      <hr><br><br>
+      <p class="guide_area_bottom">[<a href="#ID_TITLE">ページ上に戻る</a>] / [<a href="#ID_CONTENTS">目次に戻る</a>] / [<a href="../../../index.html">HOMEへ戻る</a>]</p>
+    </div>
+
+  </body>
+</html>
