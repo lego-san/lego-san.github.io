@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <meta property="og:type" content="article">
+    <title>JavaScriptファイルの読み込み</title>
+    <script type="text/javascript" src="../js/getElementById.js"></script>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">JavaScriptファイルの読み込み</h1>
+    <img src="../../../icon/先生01.jpg" alt="先生">
+    <h2 id="ID_CONTENTS">目次</h2>
+    <ol>
+      <li><a href="#ID_H2_01">Java Scriptの外部参照</a></li>
+      <li><a href="#ID_H2_02">対象のJava Script</a></li>
+      <li><a href="#ID_H2_03">Java Scriptファイルの用意</a></li>
+      <li><a href="#ID_H2_04">Java Scriptファイルで用意した関数の呼び出し</a></li>
+      <li><a href="#ID_SRC">今回作成したHTMLコードとJava Script</a></li>
+      <li><a href="#ID_H2_05">ちょっとした解説</a></li>
+    </ol>
+
+    <h2 id="ID_H2_01">Java Scriptの外部参照</h2>
+    <p>Java ScriptはHTML内部に直接書くこともできますが、外部に用意されているがいるファイルを読み込むことができます。</p>
+
+    <h2 id="ID_H2_02">対象のJava Script</h2>
+    <p>今回使用するのはHMLの要素を書き換えるこちらのJava Scriptです。</p>
+    <pre class="code01"><code>
+  &lt;script type="text/javascript"&gt;
+    document.getElementById("ID_STEP01").innerHTML = "Java Scriptのはじめの一歩";
+  &lt;/script&gt;
+    </code></pre>
+
+    <h2 id="ID_H2_03">Java Scriptファイルの用意</h2>
+    <p>まずJava Scriptファイルを用意します。ファイル名をgetElementById、拡張子を".js"としてます。
+      replace_comment(id, comment)関数の中で指定されたIDのタグに対して引数のコメントを挿入しています。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：getElementById.js</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  function replace_comment(id, comment){
+    document.getElementById(id).innerHTML = comment;
+  }
+    </code></pre>
+
+    <h2 id="ID_H2_04">Java Scriptファイルで用意した関数の呼び出し</h2>
+    <p>外部の>Java Scriptファイルを使うには、HEADタグで参照することを宣言する必要があります。</p>
+    <pre class="code01"><code>
+  &lt;head&gt;
+    &lt;script type="text/javascript" src="./getElementById.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+    </code></pre>
+    <p>HEADタグで宣言できたら本文中にこのように記載します。</p>
+    <pre class="code01"><code>
+  &lt;script&gt;
+    replace_comment("ID_STEP01", "Java Scriptのはじめの一歩");
+  &lt;/script&gt;
+    </code></pre>
+
+    <h2 id="ID_SRC">今回作成したHTMLコードとJava Script</h2>
+    <p>今回作成したHTMLは<a href="../html/sample.html">こちら</a></p>
+    <img style="width:300px;" src="../../../icon/先生02.jpg" alt="こちら">
+    <p>Java Scriptファイルは<a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/javascript/js/getElementById.js">こちら</a></p>
+
+    <h2 id="ID_H2_05">ちょっとした解説</h2>
+    <p>Java Script内でもHTMLの要素はgetElementById()関数でIDを指定し、
+      innerHTMLに値を入れることでコメントを挿入することができます。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：getElementById.js</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  function replace_comment(id, comment){
+    document.getElementById(id).innerHTML = comment;
+  }
+    </code></pre>
+    <p>HTML本文中では、Java Scriptで定義したreplace_comment関数をコールしてます。</p>
+    <pre class="code01"><code>
+  &lt;script&gt;
+    replace_comment("ID_STEP01", "Java Scriptのはじめの一歩");
+  &lt;/script&gt;
+    </code></pre>
+
+    <h2>感想</h2>
+    <p>いかがだったでしょうか。関数の概念が入るのですこし難しいですかね？</p>
+
+    <div>
+      <hr><br><br>
+      <p class="guide_area_bottom">[<a href="#ID_TITLE">ページ上に戻る</a>] / [<a href="#ID_CONTENTS">目次に戻る</a>] / [<a href="../../../index.html">HOMEへ戻る</a>]</p>
+    </div>
+
+  </body>
+</html>
