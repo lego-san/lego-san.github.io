@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+./icon/<!DOCTYPE html>
 <html id="ID_HTML" prefix="og: http://ogp.me/ns#" lang="ja" dir="ltr">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164123953-2"></script>
@@ -15,7 +15,7 @@
     <title>Legoで遊びながら初心者がプログラミングを学ぶ</title>
     <meta property="og:title" content="Legoで遊びながら初心者がプログラミングを学ぶ">
     <meta property="og:type" content="websites">
-    <meta property="og:image" content="https://lego-san.github.io/images/先生01.jpg">
+    <meta property="og:image" content="https://lego-san.github.io/icon/先生01.jpg">
     <meta property="og:url" content="https://lego-san.github.io/">
     <meta property="og:description" content=”Lego遊びを通じて写真・Gifアニメーション・HTML・プログラミングを学んでます。プログラミングは初心者から中級車向けの情報です。”>
     <meta property="og:site_name" content="Legoで遊びながら初心者がプログラミングを学ぶ">
@@ -28,7 +28,7 @@
     <div id="ID_CONTENTS" class="contents_area">
       <div class="flex_contents_area">
         <div class="flex_content_area30">
-          <img class="circle" width=100% src="./images/先生01.jpg" alt="レゴの写真">
+          <img class="circle" width=100% src="./icon/先生01.jpg" alt="レゴの写真">
         </div>
         <div class="flex_content_area70">
           <p id="ID_P">レゴは子供の知育にいいと言われています。
@@ -39,99 +39,58 @@
       </div>
       <hr>
       <div id="ID_TABS" class="tabs">
-        <input id="ID_PICTURES" type="radio" name="tab_item" checked>
-        <label id="ID_TAB_NAME" class="tab_item" for="ID_PICTURES">レゴ写真館</label>
-        <input id="ID_ANIMATIONS" type="radio" name="tab_item">
-        <label class="tab_item" for="ID_ANIMATIONS">レゴアニメーション</label>
-        <input id="ID_HP" type="radio" name="tab_item">
-        <label class="tab_item" for="ID_HP">HPの作り方</label>
+        <input id="ID_TAB01" type="radio" name="tab_item" checked>
+        <label id="ID_TAB_NAME" class="tab_item" for="ID_TAB01">遊ぼう</label>
+        <input id="ID_TAB02" type="radio" name="tab_item">
+        <label class="tab_item" for="ID_TAB02">学ぼう</label>
 
-        <div class="tab_content" id="ID_PICTURES_CONTENTS">
+        <div class="tab_content" id="ID_TAB01_CONTENTS">
           <div class="tab_content_description">
-            <h2>レゴ写真館</h2>
-            <table width=100%>
+            <h2>レゴで遊ぼうコンテンツ</h2>
+            <table>
               <tbody>
                 <tr>
-                  <th width=30%></th><th></th>
+                    <th style="width: 50%;">レゴ写真館</th>
+                    <th style="width: 50%;">レゴアニメーション</th>
                 </tr>
                 <tr>
-                  <td><img width=100% src="./images/親子01.jpg" alt="親子写真"></td>
-                  <td id="ID_TD">レゴフレンズのエマとレゴディズニーのエリック君です。</td>
+                  <td><a href="./contents/images/index_pictures.html"><img width=100% src="./contents/images/pictures/ミニフィグ01.jpg" alt="泥棒と警察"></a></td>
+                  <td><a href="./contents/images/index_animations.html"><img width=100% src="./contents/images/animations/フェイス01.gif" alt="フェイス"></a></td>
                 </tr>
                 <tr>
-                  <td><img width=100% src="./images/トイストーリー01.jpg" alt="トイストーリー"></td>
-                  <td>レゴディズニーのウッディー君とバズ君です。</td>
-                </tr>
-                <tr>
-                  <td><img width=100% src="./images/泥棒と警察01.jpg" alt="泥棒と警察"></td>
-                  <td>警察と逃げる泥棒です。</td>
+                  <td style="text-align:center;"><a href="./contents/images/index_pictures.html">入口</a></td>
+                  <td style="text-align:center;"><a href="./contents/images/index_animations.html">入口</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <div class="tab_content" id="ID_ANIMATIONS_CONTENTS">
+        <div class="tab_content" id="ID_TAB02_CONTENTS">
           <div class="tab_content_description">
-            <h2>レゴアニメーション</h2>
-            <p>ストップアニメーションと呼ばれている静止画をつなげて作ったアニメーションです。</p>
-            <table width=100%>
+            <h2>レゴで学ぼうコンテンツ</h2>
+            <table>
               <tbody>
                 <tr>
-                  <th width=50%></th><th></th>
+                    <th style="width: 30%;">HTMLを学ぶ</th>
+                    <th style="width: 30%;">Java Scriptを学ぶ</th>
+                    <th style="width: 30%;">その他</th>
                 </tr>
                 <tr>
-                  <td><img width=100% src="./images/フェイス01.gif" alt="フェイス"></td>
-                  <td>レゴフェイス</td>
+                  <td><a href="./contents/html/index.html"><img width=100% src="./contents/images/pictures/オリジナル01.jpg" alt="html"></a></td>
+                  <td><a href="./contents/javascript/html/step01.html"><img width=100% src="./contents/images/pictures/ドラゴンボート01.jpg" alt="javascript"></a></td>
+                  <td><a href="./contents/index.html"><img width=100% src="./contents/images/pictures/泥棒と警察01.jpg" alt="その他"></a></td>
                 </tr>
                 <tr>
-                  <td><img width=100% src="./images/タケコプター01.gif" alt="タケコプター少年"></td>
-                  <td>タケコプター少年</td>
-                </tr>
-                <tr>
-                  <td><img width=100% src="./images/シンデレラ01.gif" alt="シンデレラ"></td>
-                  <td>シンデレラ</td>
-                </tr>
-                <tr>
-                  <td><img width=100% src="./images/ドラゴンボート01.gif" alt="ドラゴンボート"></td>
-                  <td>ドラゴンボートレース</td>
-                </tr>
-                <tr>
-                  <td><img width=100% src="./images/強風01.gif" alt="強風"></td>
-                  <td>強風</td>
+                  <td style="text-align:center;"><a href="./contents/html/index.html">入口</a></td>
+                  <td style="text-align:center;"><a href="./contents/javascript/html/step01.html">入口</a></td>
+                  <td style="text-align:center;"><a href="./contents/index.html">入口</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <div class="tab_content" id="ID_HP_CONTENT">
-          <div class="tab_content_description">
-            <h2>レゴホームページの作り方</h2>
-            <p>本ホームページの作り方をまとめました。
-              ゼロから作り上げたその過程をお楽しみ頂ければと思います。</p>
-            <div class="flex_contents_area">
-              <div class="flex_content_area30">
-                <a href="./contents/index.html"><img width=100% src="./images/先生02.jpg" alt="先生"></a>
-              </div>
-              <div class="flex_content_area70">
-                <ol>
-                  <li><a href="./contents/step01/index.html">まずはHTMLで文章を書いてみる</a></li>
-                  <li><a href="./contents/step02/index.html">文字に色を付けてみる</a></li>
-                  <li><a href="./contents/step03/index.html">色について学んでみる</a></li>
-                  <li><a href="./contents/html/step04/index.html">文字サイズについて学んでみる</a></li>
-                  <li><a href="./contents/step05/index.html">レイアウトについて学んでみる</a></li>
-                  <li><a href="./contents/html/step06/index.html">画像の張り方について学んでみる</a></li>
-                  <li><a href="./contents/html/step07/index.html">GIFアニメーションを張り付けてみる</a></li>
-                  <li><a href="./contents/html/step08/index.html">MP4を再生してみる</a></li>
-                  <li><a href="./contents/html/step09/index.html">表を作ってみる</a></li>
-                  <li><a href="./contents/html/border-style/border-style.html">いろんな種類の枠線を使ってみる</a></li>
-                  <li><a href="./contents/reference/index.html">参考ページのリンク集</a></li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <hr>
@@ -140,7 +99,7 @@
         <script defer>
           var id = "ID_NOTE1";
           var titles = ["tag", "font-size", "height", "font-weight", "border", "width", "margin", "padding"];
-          var targets = ["ID_HTML", "ID_BODY", "ID_TITLE", "ID_P", "ID_TAB_NAME", "ID_TD"];
+          var targets = ["ID_HTML", "ID_BODY", "ID_TITLE", "ID_P", "ID_TAB_NAME"];
           check_property(id, titles, targets);
         </script>
       </div>
@@ -149,7 +108,7 @@
 
     <div>
       <hr><br><br>
-      <p id="ID_FOOTER" class="guide_area_bottom">[<a href="#ID_CONTENTS">TOPに戻る</a>] / [<a href="./privacy_policy/index.html">プライバシーポリシー</a>]</p>
+      <p id="ID_FOOTER" class="guide_area_bottom">[<a href="#ID_CONTENTS">ページ上に戻る</a>] / [<a href="./privacy_policy/index.html">プライバシーポリシー</a>]</p>
     </div>
   </body>
 </html>
