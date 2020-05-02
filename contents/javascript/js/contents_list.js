@@ -21,24 +21,6 @@ function create_contents_list(id){
 	contents_list.appendChild(ol);
 }
 
-function create_footer(id, layer){
-  if(layer == 2){
-    var contents = "[<a href='../../index.html'>HOMEへ戻る</a>]";
-  }else if(layer == 3){
-    var contents = "[<a href='#ID_TITLE'>ページ上に戻る</a>] / [<a href='#ID_CONTENTS'>目次に戻る</a>] / [<a href='../../../index.html'>HOMEへ戻る</a>]";
-  }
-  element = document.getElementById(id);
-
-  var p = document.createElement('P');
-  p.innerHTML ="<hr><br><br>";
-  element = element.appendChild(p);
-
-  var p = document.createElement('P');
-  p.innerHTML = contents;
-  p.classList.toggle("guide_area_bottom");
-  element = element.appendChild(p);
-}
-
 window.onload = function(){
   create_contents_list("ID_CONTENTS_LIST");
 }

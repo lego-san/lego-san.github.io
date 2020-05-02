@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <meta property="og:type" content="article">
+    <title>Java Scriptを使った目次の作り方</title>
+    <script type="text/javascript" src="../../../js/common.js"></script>
+    <script type="text/javascript" src="../js/contents_list.js"></script>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">Java Scriptを使って目次を作ってみる</h1>
+    <h2 id="ID_CONTENTS">目次</h2>
+    <div id="ID_CONTENTS_LIST"></div>
+
+    <h2>事前準備</h2>
+    <p>HTMLの目次を置きたい場所に、id="ID_CONTENTS_LIST"を割り当てたdiv領域を用意しておきます。</p>
+    <pre class="code01"><code><br> &lt;div id="ID_CONTENTS_LIST"&gt;&lt;/div&gt;
+    </code></pre>
+
+    <h2>目次作成のJavaScript</h2>
+    <p>JavaScriptはこのように記載できます。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：contents_list.js</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  <font color="red">function create_contents_list(id)</font>{
+  	var contents_list = document.getElementById(id);
+  	var matches = document.querySelectorAll('h2');
+    var ol = document.createElement('ol');
+  	matches.forEach( function (value, i) {
+      if ( value.id === '' ) {
+			value.id = 'ID_H2_0' + i;
+      var li = document.createElement('li');
+  		var a = document.createElement('a');
+  		a.innerHTML = value.innerHTML;
+  		a.href = '#' + value.id;
+  		li.appendChild(a);
+  		ol.appendChild(li);
+  	});
+  	contents_list.appendChild(ol);
+  }    </code></pre>
+    <p>呼び出し元のHTMLはこのようになります。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：main.html</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  &lt;div id="ID_CONTENTS_LIST"&gt;
+    &lt;script&gt;
+      <font color="red">create_contents_list("ID_CONTENTS_LIST");</font>
+    &lt;/script&gt;
+  &lt;/div&gt;
+    </code></pre>
+
+    <h2>ちょっとした解説：querySelectorAll</h2>
+    <p>これは引数に指定された要素をすべて取り出します。</p>
+
+    <h2>ちょっとした解説：forEach</h2>
+    <p>各要素ごとに引数に指定した関数を実行します。</p>
+
+    <h2 id="ID_SRC">今回作成したJava Script</h2>
+    <p>実際に作成したJava Scriptは<a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/javascript/js/contents_list.js">こちら</a></p>
+    <img style="width:300px;" src="../../../icon/先生02.jpg" alt="こちら">
+
+    <h2 id="ID_COMMENT">感想</h2>
+    <p>いままで学んできた中で一番難しい構文でした。querySelectorAllやforEachの使い方は調べないとダメですね。</p>
+
+    <div id="ID_FOOTER">
+      <script type="text/javascript">
+        create_footer("ID_FOOTER",3);
+      </script>
+    </div>
+
+  </body>
+</html>
