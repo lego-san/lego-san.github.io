@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <meta property="og:type" content="article">
+    <title>Java Scriptを使ったFooterの作り方</title>
+    <script type="text/javascript" src="../js/footer.js"></script>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">Java Scriptを使ってHTMLのフッターを作ってみる</h1>
+    <h2 id="ID_CONTENTS">目次</h2>
+    <ol>
+      <li><a href="#ID_H2_01">事前準備</a></li>
+      <li><a href="#ID_H2_02">シンプルなFooter</a></li>
+      <li><a href="#ID_H2_03">ちょっとした改善：IDを可変にする</a></li>
+      <li><a href="#ID_H2_04">ちょっとした改善：ページ読み込み時に起動する</a></li>
+      <li><a href="#ID_SRC">今回作成したページのHTMLコード</a></li>
+    </ol>
+
+    <h2 id="ID_H2_01">事前準備</h2>
+    <p>HTMLのFooterを置きたい場所に、id="ID_FOOTER"を割り当てたdiv領域を用意しておきます。</p>
+    <pre class="code01"><code><br> &lt;div id="ID_FOOTER"&gt;&lt;/div&gt;
+    </code></pre>
+
+    <h2 id="ID_H2_02">シンプルなFooter</h2>
+    <p>シンプルなFooterはこのように記載できます。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：footer.js</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  <font color="red">function create_footer()</font>{
+    var contents = "FOOTERです。";
+    element = document.getElementById("ID_FOOTER");
+    var p = document.createElement('P');
+    p.innerHTML = contents;
+    element = element.appendChild(p);
+  }
+    </code></pre>
+    <p>呼び出し元のHTMLはこのようになります。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：main.html</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  &lt;div id="ID_FOOTER"&gt;
+    &lt;script&gt;
+      <font color="red">create_footer();</font>
+    &lt;/script&gt;
+  &lt;/div&gt;
+    </code></pre>
+
+    <h2 id="ID_H2_03">ちょっとした改善：IDを可変にする</h2>
+    <p>シンプルなFooterはこのように記載できます。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：footer.js</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  function create_footer(<font color="red">id</font>){
+    var contents = "FOOTERです。";
+    element = document.getElementById(id);
+    var p = document.createElement('P');
+    p.innerHTML = contents;
+    element = element.appendChild(p);
+  }
+    </code></pre>
+    <p>呼び出し元のHTMLはこのようになります。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：main.html</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  &lt;div id="ID_FOOTER"&gt;
+    &lt;script&gt;
+      create_footer(<font color="red">"ID_FOOTER"</font>);
+    &lt;/script&gt;
+  &lt;/div&gt;
+    </code></pre>
+
+    <h2 id="ID_H2_03">ちょっとした改善：classを指定する</h2>
+    <p>classを指定すれば、Styleシートで色やサイズ、位置などを簡単にすることができます。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：footer.js</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  function create_footer(id){
+    var contents = "FOOTERです。";
+    element = document.getElementById(id);
+    var p = document.createElement('P');
+    p.innerHTML = contents;
+    <font color="red">p.classList.toggle("my_class");</font>
+    element = element.appendChild(p);
+  }
+    </code></pre>
+
+    <h2 id="ID_H2_04">ちょっとした改善：ページ読み込み時に起動する</h2>
+    <p>Java Scriptでwindow.onloadを設定しておけば、ページ読み込み時に指定関数を呼び出してくれます。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：footer.js</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  window.onload = function(){
+    create_footer("ID_FOOTER");
+  }
+    </code></pre>
+    <p>呼び出し元のHTMLはこのようになります。</p>
+    <p style="margin-bottom: 0px;"><b>ファイル名：main.html</b></p>
+    <pre class="code01" style="margin-top: 0px;"><code>
+  &lt;div id="ID_FOOTER"&gt;&lt;/div&gt;
+    </code></pre>
+
+    <h2 id="ID_SRC">今回作成したJava Script</h2>
+    <p>実際に作成したJava Scriptは<a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/javascript/js/footer.js">こちら</a></p>
+    <img style="width:300px;" src="../../../icon/先生02.jpg" alt="こちら">
+
+    <h2>感想</h2>
+    <p>シンプルなFooterだけなら意外と簡単でした。画面下に固定するなどの工夫はすこし調査が必要ですね。</p>
+
+    <div id="ID_FOOTER"></div>
+
+  </body>
+</html>
