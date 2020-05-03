@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <title>Google Chromeで動画が再生できない</title>
+    <script type="text/javascript" src="../../../js/common.js"></script>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">title</h1>
+    <h2 id="ID_CONTENTS">目次</h2>
+    <div id="ID_CONTENTS_LIST"></div>
+
+    <h2>動画が再生できない。なぜ？</h2>
+    <p>普段使っているパソコンでみると動画が再生されるのに、スマホだと再生されない。
+    (<a href="../video/video.html">このページ</a>)</p>
+
+    <h2>再生できないのはGoogle Chrome?</h2>
+    <p>Google Chromeには制限があることが分かった。理由はわからないがMP4が再生できない。
+      ネットではmutedをつければよいと言われているが出来なかった。</p>
+
+    <h2>Google Chromeで再生する</h2>
+    <p>MP4はあきらめました。googleが推奨するwebmファイルを使うことに。</p>
+
+    <video style="width:400px;"controls autoplay loop playsinline muted>
+      <source src="../video/images/テストファイル.webm" type="video/webm">
+      <source src="../video/images/テストファイル.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+    <pre class="code01"><code>
+  &lt;video style="width:400px;"controls autoplay loop playsinline muted&gt;
+    &lt;source src="../video/images/テストファイル.webm" type="video/webm"&gt;
+    &lt;source src="../video/images/テストファイル.mp4" type="video/mp4"&gt;
+    Your browser does not support HTML video.
+  &lt;/video&gt;
+    </code></pre>
+
+    <h2 id="ID_COMMENT">感想</h2>
+    <p>再生できましたが、Google Chromeに対応するために動画ファイルを2つ用意するのは手間ですよね。。。</p>
+
+    <div id="ID_FOOTER"></div>
+
+    <script>
+      create_contents_list("ID_CONTENTS_LIST");
+      create_footer("ID_FOOTER",3);
+    </script>
+
+
+  </body>
+</html>
