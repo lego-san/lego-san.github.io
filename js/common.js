@@ -39,6 +39,6 @@ function create_footer(id, layer){
   element = element.appendChild(p);
 }
 
-window.onload = function(){
-	create_contents_list("ID_CONTENTS_LIST");
-}
+//window.onload = function(){
+//	create_contents_list("ID_CONTENTS_LIST");
+//}
