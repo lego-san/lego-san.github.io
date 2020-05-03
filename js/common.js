@@ -40,5 +40,5 @@ function create_footer(id, layer){
 }
 
 window.onload = function(){
-  create_contents_list("ID_CONTENTS_LIST");
+	create_contents_list("ID_CONTENTS_LIST");
 }
