@@ -5,37 +5,58 @@
     <meta charset="utf-8">
     <meta property="og:type" content="article">
     <title>Legoを使ってアニメーションを作ってみる</title>
+    <style media="screen">
+      table {
+        border: 3px double black;
+        border-radius: 5%;
+        width: 400px;
+      }
+      th {
+        border: 0px;
+      }
+      td {
+        padding-bottom: 20px;
+        border: 0px;
+      }
+    </style>
+    <script type="text/javascript" src="../../js/common.js"></script>
   </head>
   <body>
     <h1 id="ID_TITLE">レゴアニメーション</h1>
     <p>ストップアニメーションと呼ばれている静止画をつなげて作ったアニメーションです。</p>
-    <table width=100%>
-      <tbody>
-        <tr>
-          <th width=50%></th><th></th>
-        </tr>
-        <tr>
-          <td><img width=100% src="./animations/フェイス01.gif" alt="フェイス"></td>
-          <td>レゴフェイス</td>
-        </tr>
-        <tr>
-          <td><img width=100% src="./animations/タケコプター01.gif" alt="タケコプター少年"></td>
-          <td>タケコプター少年</td>
-        </tr>
-        <tr>
-          <td><img width=100% src="./animations/シンデレラ01.gif" alt="シンデレラ"></td>
-          <td>シンデレラ</td>
-        </tr>
-        <tr>
-          <td><img width=100% src="./animations/ドラゴンボート01.gif" alt="ドラゴンボート"></td>
-          <td>ドラゴンボートレース</td>
-        </tr>
-        <tr>
-          <td><img width=100% src="./animations/強風01.gif" alt="強風"></td>
-          <td>強風</td>
-        </tr>
-      </tbody>
+    <h2 id="ID_CONTENTS">目次</h2>
+    <div id="ID_CONTENTS_LIST"></div>
+
+    <h2>レゴシティシリーズ</h2>
+    <table align="center">
+      <tr><th>喜怒哀楽するミニフィグ</th></tr>
+      <tr><td><img src="./animations/フェイス01.gif" alt="フェイス"></td></tr>
     </table>
+    <br>
+    <table align="center">
+      <tr><th>タケコプター少年</th></tr>
+      <tr><td><img src="./animations/タケコプター01.gif" alt="タケコプター"></td></tr>
+    </table>
+    <br>
+    <table align="center">
+      <tr><th>強風</th></tr>
+      <tr><td><img src="./animations/強風01.gif" alt="強風"></td></tr>
+    </table>
+    <br>
+    <table align="center">
+      <tr><th>ドラゴンボートレース</th></tr>
+      <tr><td><img src="./animations/ドラゴンボート01.gif" alt="ドラゴンボート"></td></tr>
+    </table>
+
+    <h2>ディズニーシリーズ</h2>
+    <table align="center">
+      <tr><th>シンデレラ</th></tr>
+      <tr><td><img src="./animations/シンデレラ01.gif" alt="シンデレラ"></td></tr>
+    </table>
+
+    <script>
+      create_contents_list("ID_CONTENTS_LIST");
+    </script>
 
     <div>
       <hr><br><br>
