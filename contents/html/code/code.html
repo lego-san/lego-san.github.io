@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <title>【レゴ研鑽】HTMLを使ったソースコードの表現方法</title>
+    <meta property="og:title" content="【レゴ研鑽】HTMLを使ったソースコードの表現方法">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://lego-san.github.io/icon/先生01.jpg">
+    <meta property="og:url" content="https://lego-san.github.io/contents">
+    <meta property="og:description" content="ソースコードの表現方法を紹介します。">
+    <meta property="og:site_name" content="【レゴ研鑽】Legoで遊びながら学ぶ">
+    <script type="text/javascript" src="../../../js/common.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <style media="screen">
+      .prettyprint ol.linenums > li {
+        list-style-type: decimal;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">【レゴ研鑽】HTMLを使ったソースコードの表現方法</h1>
+    <p>HTMLを使ったソースコードの表現方法を紹介します。<br>
+      本ページはGitHub Pagesで構築されてますので、修正・加筆等あればお気軽にPsuhください。</p>
+
+    <h2 id="ID_CONTENTS">目次</h2>
+    <div id="ID_CONTENTS_LIST"></div>
+
+    <h2>HTML Computer Code Elements</h2>
+    <p>HTMLには下記のような様々なタグが用意されています。</p>
+    <table>
+      <caption>Computer Code Tag</caption>
+      <tr><th>タグ名</th><th>概要</th></tr>
+      <tr><td>code</td><td>プログラミングコード</td></tr>
+      <tr><td>kbd</td><td>キーボード入力</td></tr>
+      <tr><td>samp</td><td>コンピュータ出力</td></tr>
+      <tr><td>var</td><td>変数</td></tr>
+      <tr><td>pre</td><td>整形済みテキスト</td></tr>
+    </table>
+
+    <h2>codeタグ</h2>
+    <p>codeタグはプログラミングコードに使用されます。コードはmonospace fontで表現されます。空白や改行は表現されないため注意が必要です。</p>
+    <p class="caption">使用例：codeタグ</p>
+    <pre class="code01"><code>
+  &lt;code&gt;
+    x = 5;&lt;br&gt;
+    y = 6;&lt;br&gt;
+    z = x + y;
+  &lt;/code&gt;
+    </code></pre>
+    <p class="caption">出力結果</p>
+    <code>
+      x = 5;<br>
+      y = 6;<br>
+      z = x + y;
+    </code>
+
+    <h2>kbdタグ</h2>
+    <p>kbdタグはキーボード入力の表現に使用されます。</p>
+    <p class="caption">使用例：kbdタグ</p>
+    <pre class="code01"><code>
+  &lt;p&gt;Save the document by pressing &lt;kbd&gt;Ctrl + S&lt;/kbd&gt;&lt;/p&gt;
+    </code></pre>
+    <p class="caption">出力結果</p>
+    <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+    <h2>sampタグ</h2>
+    <p>sampタグはコンピュータの出力結果の表現に使用されます。</p>
+    <p class="caption">使用例：sampタグ</p>
+    <pre class="code01"><code>
+  &lt;p&gt;If you input wrong value, the program will return &lt;samp&gt;Error!&lt;/samp&gt;&lt;/p&gt;
+    </code></pre>
+    <p class="caption">出力結果</p>
+    <p>If you input wrong value, the program will return <samp>Error!</samp></p>
+
+    <h2>varタグ</h2>
+    <p>varタグは変数の表現に使用されます。</p>
+    <p class="caption">使用例：varタグ</p>
+    <pre class="code01"><code>
+  &lt;p&gt;Einstein wrote: &lt;var&gt;E&lt;/var&gt; = &lt;var&gt;mc&lt;/var&gt;&lt;sup&gt;2&lt;/sup&gt;. &lt;/p&gt;
+    </code></pre>
+    <p class="caption">出力結果</p>
+    <p>Einstein wrote: <var>E</var> = <var>mc</var><sup>2</sup>. </p>
+
+    <h2>Google code-prettify</h2>
+    <p>Google code-prettifyはGoogleが提供するJavaScriptです。JavaScriptを読み込んでclassを指定すると下記のように表現できます。</p>
+    <p class="caption">ヘッダ定義</p>
+    <pre class="code01"><code>
+  &lt;script type="text/javascript" src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"&gt;&lt;/script&gt;
+    </code></pre>
+    <p class="caption">使用例：Google code-prettify</p>
+    <pre class="code01"><code>
+  &lt;pre style="margin: 0px;" class="prettyprint lang-js"&gt;console.log('Google code-prettify')&lt;/pre&gt;
+    </code></pre>
+
+    <p class="caption">出力結果</p>
+    <pre style="margin: 0px;" class="prettyprint lang-js">console.log('Google code-prettify')</pre>
+
+    <h2>Google code-prettifyを使った行番号表示</h2>
+    <p>classにlinenumsを追加すれば簡単に行番号を入れることができます。ただし、下記のようにstyleを設定する必要があります。</p>
+    <p class="caption">ヘッダ定義</p>
+    <pre class="code01"><code>
+  &lt;style media="screen"&gt;
+    .prettyprint ol.linenums > li {
+      list-style-type: decimal;
+    }
+  &lt;/style&gt;
+    </code></pre>
+    <p class="caption">使用例：Google code-prettify</p>
+    <pre class="code01"><code>
+  &lt;pre style="margin: 0px;" class="prettyprint lang-js"&gt;console.log('Google code-prettify')&lt;/pre&gt;
+    </code></pre>
+
+    <p class="caption">出力結果</p>
+    <pre style="margin-top: 0px; padding-left: 10px;" class="prettyprint lang-js linenums">
+  x = 5;
+  y = 6;
+  z = x + y;
+  return z;</pre>
+
+    <pre class="code01"><code><br> &lt; TAG &gt;
+    </code></pre>
+
+    <h2>ローカルファイルのGoogle code-prettifyを使う方法</h2>
+    <p>下記の方法でローカルに置いたGoogle code-prettifyを使うことができます。</p>
+    <p class="caption">JavaScript,CSSの読み込み</p>
+    <pre class="code01"><code>
+  &lt;link rel="stylesheet" type="text/css" href="prettify.css"&gt;
+  &lt;script src="prettify.js"&gt;&lt;/script&gt;
+    </code></pre>
+
+    <p class="caption">JavaScript関数の起動</p>
+    <pre class="code01"><code>
+ window.addEventListener("load", function(event) {
+  	PR.prettyPrint()
+  });
+    </code></pre>
+
+    <h2>今回作成したページのHTMLコード</h2>
+    <p>実際に作成したページは<a href="../step/step11.html">こちら</a></p>
+    <img style="width:300px;" src="../../../icon/先生02.jpg" alt="こちら">
+    <p>HTMLコードは<a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/html/step/step11.html">こちら</a></p>
+
+    <h2 id="ID_COMMENT">感想</h2>
+    <p>Google code-prettifyは便利ですね。どのくらいの処理能力が必要となるのかは気になります。</p>
+
+    <div id="ID_FOOTER"></div>
+
+    <script>
+      create_contents_list("ID_CONTENTS_LIST");
+      create_footer("ID_FOOTER",3);
+    </script>
+
+
+  </body>
+</html>
