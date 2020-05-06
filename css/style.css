@@ -16,6 +16,12 @@ table, th, td {
   border: solid 1px black;
 }
 
+.caption {
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
 .top_area {
   width: 100%;
   background-color: white;
@@ -34,6 +40,7 @@ table, th, td {
 
 .contents_area{
   margin: 130px 0px 0px 0px;
+  margin: 230px 0px 0px 0px;
 }
 
 .guide_area_bottom {
@@ -51,6 +58,7 @@ table, th, td {
   border-left: solid 10px #999999;
   border-bottom: solid 3px #CCCCCC;
   padding: 0px;
+  margin: 0px;
 }
 
 .w300 {
