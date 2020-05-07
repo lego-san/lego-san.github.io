@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <title>【レゴ研鑽】Styleとは。文字を装飾してみる</title>
+    <meta property="og:title" content="【レゴ研鑽】Styleとは。文字を装飾してみる">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://lego-san.github.io/icon/先生01.jpg">
+    <meta property="og:url" content="https://lego-san.github.io/contents/html/style/style.html">
+    <meta property="og:description" content="HTMLでの文字の文字の装飾方法を紹介します。">
+    <meta property="og:site_name" content="【レゴ研鑽】Legoで遊びながら学ぶ">
+    <script type="text/javascript" src="../../../js/common.js"></script>
+
+  </head>
+  <body>
+    <h1>【レゴ研鑽】Styleとは。文字を装飾してみる</h1>
+    <p>文字に色を付けたくて色々調べ物をしてみました。fontというタグでcolorを指定すれば色の設定ができるようです。が、</p>
+    <p style="color: red; font-size: 40px;">Not Supported in HTML5.</p>
+    <p>HTML5というバージョンではサポートされていないようです。なので今回は現在推奨されている<b>Styleタグ</b>について紹介していきます。</p>
+
+    <h2 id="ID_CONTENTS">目次</h2>
+    <div id="ID_CONTENTS_LIST"></div>
+
+    <h2>HTML Style属性とは</h2>
+    <p>HTML StyleはHTML要素の色やフォント、サイズなどを変更するときに使用できる設定項目(属性)です。</p>
+    <p class="caption">Style属性の使用例</p>
+    <p style="color:red; padding: 0px; margin: 0px;">赤色の文字</p>
+    <p style="color:blue; padding: 0px; margin: 0px;">青色の文字</p>
+    <p style="color:green; padding: 0px; margin: 0px;">青色の文字</p>
+
+    <h2>HTML Styleの3つの設定方法</h2>
+    <p>設定方法は3種類あります。タグに直接記載する<b>インライン設定</b>、ヘッダ内に記載する<b>インターナル設定</b>、そして外部ファイルを参照する<b>外部設定</b>。
+    以下にてそれぞれ紹介します。</p>
+
+    <h2>[a]インライン設定</h2>
+    <p>インライン設定はタグの中に直接Style情報を記載します。本文中の特定箇所だけ個別に設定できるので便利です。
+      ただ、使いすぎると保守性が低下するので、インターナル設定や外部設定と併用することをお勧めします。</p>
+    <p class="caption">インライン設定の例</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;p <span style="color:red;">style="color: red;"</span>&gt;インライン設定の例&lt;/p&gt;</code></pre>
+
+    <h2>[b]インターナル設定</h2>
+    <p>インターナル設定はヘッダの中にStyle情報を記載します。タグごとや、特定のID、Classに対してまとめて設定することができます。
+      以下の例では全ての&lt;p&gt;要素に対して文字が赤くなるような設定をしています。
+      ウェブページごとにまとめて設定したい場合に使用してみてください。</p>
+    <p class="caption">インターナル設定の例</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja" dir="ltr"&gt;
+  &lt;head&gt;
+    <span style="color:red;">&lt;style&gt;
+      p {color: red;}
+    &lt;/style&gt;</span>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;インターナル設定の例&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>[c]外部設定</h2>
+    <p>外部設定は外部のCSSファイルにStyle情報を記載します。
+      Style情報をウェブページに対してまとめて設定するときに便利です。
+      ただし、Style情報の変更が参照している全てのファイルに影響ができることに注意してください。</p>
+    <p class="caption">外部設定の例(HTMLファイル)</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja" dir="ltr"&gt;
+  &lt;head&gt;
+    <span style="color:red;">&lt;link rel="stylesheet" href="./style.css"&gt;</span>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;外部設定の例&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <p>外部ファイルを参照するときは、下記のようにCSSファイルを引き当てる必要があります。</p>
+    <p class="caption">外部ファイルの参照方法</p>
+    <pre class="code01" style="padding: 10px;"><code><span style="color:red;">&lt;link rel="stylesheet" href="./style.css"&gt;</span></code></pre>
+    <p>外部ファイルの記載方法はインターナル設定の記述と同じです。ファイルの拡張子は".css"としてください。</p>
+    <p class="caption">外部設定の例(外部ファイル/style.css)</p>
+    <pre class="code01" style="padding: 10px;"><code><span style="color:red;">p {color: red;}</span></code></pre>
+
+    <h2>CSS Fonts設定 色</h2>
+    <p>色はcolorで設定できます。</p>
+    <p class="caption">色の設定の例</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;head&gt;
+  &lt;style&gt;
+    p {<span style="color:red;">color: red;</span>}
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+    <p>設定値はred,blue,black,whiteのように文字列で指定する方法や、#FFFなど数値(16進数)で指定する方法などがあります。
+    色のバリエーションは<a href="../color/color.html">こちら</a>を参照してください。</p>
+
+    <h2>サンプルHTMLへのリンク</h2>
+    <p>サンプルページは<a href="../step/step02_style.html">こちら</a>から確認できます。</p>
+    <img style="width:300px;" src="../../../icon/先生02.jpg" alt="こちら">
+    <p>HTMLファイルは<a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/html/step/step02_style.html">こちら</a>からダウンロードしてください。</p>
+
+    <h2 id="ID_COMMENT">感想</h2>
+    <p>文字の装飾は奥が深いです。一番お手軽なのはインライン設定かもしれませんが、
+      ホームページ等をつくるなら、メンテナンス性を考えて、外部ファイルに記載しておいたほうがいいかもしれません。
+      ただ、慣れないうちはインラインとインターナルで運用することをお勧めします。</p>
+    <img class="w300" src="../../../icon/先生03.jpg" alt="さようなら">
+
+    <div id="ID_FOOTER"></div>
+
+    <script>
+      create_contents_list("ID_CONTENTS_LIST");
+      create_footer("ID_FOOTER",3);
+    </script>
+
+  </body>
+</html>
