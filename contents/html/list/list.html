@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <title>【レゴ研鑽】リストについて学んでみる</title>
+    <meta property="og:title" content="【レゴ研鑽】リストについて学んでみる">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://lego-san.github.io/icon/先生01.jpg">
+    <meta property="og:url" content="https://lego-san.github.io/contents/html/list/list.html">
+    <meta property="og:description" content="目次を作成するときなどにも使用するHTML List。本ページはリストの使い方、オプション設定方法について説明します。">
+    <meta property="og:site_name" content="【レゴ研鑽】Legoで遊びながら学ぶ">
+    <script type="text/javascript" src="../../../js/common.js"></script>
+    <style media="screen">
+      td {
+        padding: 0px 10px 0px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">【レゴ研鑽】リストについて学んでみる</h1>
+    <p>箇条書きや、項目を一覧として表示するときに<span class="red">リスト</span>が使えると便利です。本サイトでは目次を生成するときのもリストを使用しています。
+      <br>本ページはGitHub Pagesで構築されてますので、修正・加筆等あればお気軽にPsuhください。</p>
+
+    <h2 id="ID_CONTENTS">目次</h2>
+    <div id="ID_CONTENTS_LIST"></div>
+
+    <h2>リストの種類</h2>
+    <p>HTML Listは<b>Order List</b>、<b>Unordered List</b>、<b>Description List</b>の3種類あります。それぞれ紹介しています。</p>
+
+    <h2>Order HTML List</h2>
+    <p>Order Listは<b>番号</b>が振ってあるリストです。手動で番号を振らなくても、自動で付与されるため便利です。デフォルト設定の場合、
+      番号は<b>数字</b>で表示されます。これはリストの<b>type属性</b>を変更することでローマ数字表示などに変更することができます。</p>
+    <p class="caption">オーダーリストサンプル</p>
+    <pre class="code01" style="padding: 10px;"><ol><li>Order List</li><li>Unordered List</li><li>Description List</li></ol></pre>
+
+    <h3>Order Listの種類(属性)</h3>
+    <table>
+      <tr>
+        <th>種類</th><th>Type</th><th>サンプル</th><th>記述方法</th>
+      </tr>
+      <tr>
+        <td>数字</td>
+        <td>type="1"</td>
+        <td>
+          <ol type="1">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol type="1"&gt;</td>
+      </tr>
+      <tr>
+        <td>アルファベット(大文字)</td>
+        <td>type="A"</td>
+        <td>
+          <ol type="A">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol type="A"&gt;</td>
+      </tr>
+      <tr>
+        <td>アルファベット(小文字)</td>
+        <td>type="a"</td>
+        <td>
+          <ol type="a">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol type="a"&gt;</td>
+      </tr>
+      <tr>
+        <td>ローマ数字(大文字)</td>
+        <td>type="I"</td>
+        <td>
+          <ol type="I">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol type="I"&gt;</td>
+      </tr>
+      <tr>
+        <td>ローマ数字(小文字)</td>
+        <td>type="i"</td>
+        <td>
+          <ol type="i">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol type="i"&gt;</td>
+      </tr>
+    </table>
+
+    <h2>Unordered HTML List</h2>
+    <p>Unordered Listは<b>番号が振っていない</b>リストです。項目のマーカーはデフォルト設定では●となっていますが、list-style-typeを設定することで変更することができます。</p>
+    <p class="caption">アンオーダーリストサンプル</p>
+    <pre class="code01" style="padding: 10px;"><ul><li>Order List</li><li>Unordered List</li><li>Description List</li></ul></pre>
+
+    <h3>Unordered Listの種類(属性)</h3>
+    <table>
+      <tr>
+        <th>種類</th><th>list-style-type</th><th>サンプル</th><th>記述方法</th>
+      </tr>
+      <tr>
+        <td>黒丸</td>
+        <td>disc</td>
+        <td>
+          <ol style="list-style-type:disc;">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol style="list-style-type:disc;"&gt;</td>
+      </tr>
+      <tr>
+        <td>白丸</td>
+        <td>circle</td>
+        <td>
+          <ol style="list-style-type:circle;">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol style="list-style-type:circle;"&gt;</td>
+      </tr>
+      <tr>
+        <td>■</td>
+        <td>square</td>
+        <td>
+          <ol style="list-style-type:square;">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol style="list-style-type:square;"&gt;</td>
+      </tr>
+      <tr>
+        <td>なし</td>
+        <td>none</td>
+        <td>
+          <ol style="list-style-type:none;">
+            <li>サンプル</li>
+            <li>サンプル</li>
+          </ol>
+        </td>
+        <td>&lt;ol style="list-style-type:none;"&gt;</td>
+      </tr>
+    </table>
+
+    <h2>Description List</h2>
+    <p>Description Listは用語定義等に用いられるリストです。dlタグがディスクリプションリストを示し、dtタグが用語や名称、ddタグがそれぞれの概要を示します。</p>
+    <p class="caption">HTMLサンプル</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;dl&gt;
+  &lt;dt&gt;Coffee&lt;/dt&gt;
+  &lt;dd&gt;- black hot drink&lt;/dd&gt;
+  &lt;dt&gt;Milk&lt;/dt&gt;
+  &lt;dd&gt;- white cold drink&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+<p class="caption">ディスクリプションリスト出力結果</p>
+<pre class="code01" style="padding: 10px;"><dl><dt>Coffee</dt><dd>- black hot drink</dd><dt>Milk</dt><dd>- white cold drink</dd></dl></pre>
+
+    <h2 id="ID_COMMENT">感想</h2>
+    <p>箇条書きの項目数が多い場合や、目次を生成するときにリストは活躍します。使い方を覚えてなてなくても問題はありませんが、
+      覚えておくと便利です。</p>
+
+    <div id="ID_FOOTER"></div>
+
+    <script>
+      create_contents_list("ID_CONTENTS_LIST");
+      create_footer("ID_FOOTER",3);
+    </script>
+
+
+  </body>
+</html>

@@ -1,21 +1,31 @@
 function create_contents_list(id){
 	var contents_list = document.getElementById(id);
-	var matches = document.querySelectorAll('h2');
-	//var ul = document.createElement('ul');
+	var elements = document.querySelectorAll('H2, H3');
+
   var ol = document.createElement('ol');
-	matches.forEach( function (value, i) {
-		if(value.id === "ID_CONTENTS" || value.id === "ID_COMMENT"){
+	elements.forEach( function (element, i) {
+		if(element.id === "ID_CONTENTS" || element.id === "ID_COMMENT"){
       ;
     }else{
-        if ( value.id === '' ) {
-  			value.id = 'ID_H2_0' + i;
-  		}
-      var li = document.createElement('li');
-  		var a = document.createElement('a');
-  		a.innerHTML = value.innerHTML;
-  		a.href = '#' + value.id;
-  		li.appendChild(a);
-  		ol.appendChild(li);
+			if (element.tagName == 'H2'){
+				if ( element.id === '' ) {
+					element.id = 'ID_H2_0' + i;
+				}
+				var li = document.createElement('li');
+				var a = document.createElement('a');
+				a.innerHTML = element.innerHTML;
+				a.href = '#' + element.id;
+				li.appendChild(a);
+				ol.appendChild(li);
+			}else if(element.tagName == 'H3'){
+				if ( element.id === '' ) {
+					element.id = 'ID_H3_0' + i;
+				}
+	  		var a = document.createElement('a');
+	  		a.innerHTML = element.innerHTML;
+	  		a.href = '#' + element.id;
+	  		ol.appendChild(a);
+			}
     }
 	});
 	contents_list.appendChild(ol);
@@ -25,7 +35,9 @@ function create_footer(id, layer){
   if(layer == 2){
     var contents = "[<a href='../../index.html'>HOMEへ戻る</a>]";
   }else if(layer == 3){
-    var contents = "[<a href='#ID_TITLE'>ページ上に戻る</a>] / [<a href='#ID_CONTENTS'>目次に戻る</a>] / [<a href='../../../index.html'>HOMEへ戻る</a>]";
+    //var contents = "[<a href='#ID_TITLE'>ページ上に戻る</a>] / [<a href='#ID_CONTENTS'>目次に戻る</a>] / [<a href='../../index.html'>一覧へ戻る</a>] / [<a href='../../../index.html'>HOME</a>] > ";
+		var contents = "[<a href='../../../index.html'>HOME</a>] >> [<a href='../index.html'>一覧</a>] >> [<a href='#ID_TITLE'>ページTOP</a>] >> [<a href='#ID_CONTENTS'>ページ目次</a>]";
+
   }
   element = document.getElementById(id);
 

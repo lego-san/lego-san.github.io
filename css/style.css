@@ -90,3 +90,8 @@ table, th, td {
     width: 70%;
     box-sizing: border-box;
 }
+
+.red {
+  color: red;
+  font-weight: bold;
+}
