@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html id="ID_HTML" lang="ja" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <title>【レゴ研鑽】JavaScriptを使った情報収集(開発者向け)</title>
+    <meta property="og:title" content="【レゴ研鑽】JavaScriptを使った情報収集(開発者向け)">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://lego-san.github.io/icon/先生01.jpg">
+    <meta property="og:url" content="https://lego-san.github.io/contents/javascript/html/step07_property.html">
+    <meta property="og:description" content=JavaScriptを使ってスクリーンサイズ、ウインドウサイズ、タグ情報、ナビゲーション情報などを取得します。>
+    <meta property="og:site_name" content="【レゴ研鑽】Legoで遊びながら学ぶ">
+    <script type="text/javascript" src="../../../js/common.js"></script>
+    <script type="text/javascript" src="../js/check_property.js"></script>
+    <style media="screen">
+      th, td {
+        padding: 5px 10px 5px 10px;
+        text-align: center;
+      }
+      button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body id="ID_BODY">
+    <div id="ID_HEADER" class="top_area">
+
+      <h1 id="ID_TITLE">【レゴ研鑽】JavaScriptを使った情報収集</h1>
+      <p id="ID_P">JavaScriptを使ってスクリーンサイズ、ウインドウサイズ、タグ情報、ナビゲーション情報などを取得します。JavaScriptを参照されたい方はこちら(
+        <a href="https://github.com/lego-san/lego-san.github.io/blob/master/contents/javascript/js/check_property.js">GitHub</a>)をご確認ください。
+        <br>情報収集本ページはGitHub Pagesで構築されてますので、修正・加筆等あればお気軽にPushください。</p>
+
+      <h2>プロパティの取得</h2>
+      <form>
+        <button style="font-size: 30px;" type="button" name="window" onclick="check_window_size('ID_CONTENTS');">Screen/Window/HTMLサイズの取得</button><br>
+        <button style="font-size: 30px;" type="button" name="tag" onclick="check_tag_property('ID_CONTENTS');">タグプロパティの取得</button>
+        <button style="font-size: 30px;" type="button" name="tag" onclick="check_tag_position('ID_CONTENTS');">タグポジションの取得</button><br>
+        <button style="font-size: 30px;" type="button" name="tag" onclick="check_navigator_property('ID_CONTENTS');">ナビゲーションプロパティの取得</button>
+        <button style="font-size: 30px;" type="button" name="tag" onclick="check_location_property('ID_CONTENTS');">ロケーションプロパティの取得</button><br>
+        <button style="font-size: 30px;" type="button" name="all" onclick="check_all_property('ID_CONTENTS');">一括取得</button>
+        <button type="button" name="reset" onclick="location.reload();">Reset</button>
+      </form>
+      <hr>
+    </div>
+
+    <div id="ID_CONTENTS"></div>
+
+    <div id="ID_FOOTER"></div>
+
+    <script>
+      create_footer("ID_FOOTER",3);
+      document.getElementById("ID_CONTENTS").style.marginTop = document.getElementById("ID_HEADER").clientHeight + "px";
+    </script>
+
+  </body>
+</html>

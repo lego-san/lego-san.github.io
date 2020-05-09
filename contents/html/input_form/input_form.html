@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta charset="utf-8">
+    <title>【レゴ研鑽】HTML 入力フォームの作り方</title>
+    <meta property="og:title" content="【レゴ研鑽】HTML 入力フォームの作り方">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://lego-san.github.io/icon/先生01.jpg">
+    <meta property="og:url" content="https://lego-san.github.io/contents/html/input_form.html">
+    <meta property="og:description" content=”ウェブページでよく見かける入力フォーム。HTMLではどのように表現するのでしょうか。今回はbuttonタグ、inputタグを紹介します。”>
+    <meta property="og:site_name" content="【レゴ研鑽】Legoで遊びながら学ぶ">
+    <script type="text/javascript" src="../../../js/common.js"></script>
+  </head>
+  <body>
+    <h1 id="ID_TITLE">【レゴ研鑽】HTML 入力フォームの作り方</h1>
+    <p>ウェブページでよく見かける<b>入力フォーム</b>。HTMLではどのように表現するのでしょうか。
+      今回は<b>buttonタグ</b>、<b>inputタグ</b>を紹介します。</p>
+    <form style="text-align: center;">
+      <p class="caption">サンプル</p>
+      <button type="button" name="button">ボタン</button>
+      <input type="text" name="input" value="入力Box"><input type="color"><input type="range"><input type="datetime-local">
+      <button type="reset" name="reset">リセット</button>
+    </form>
+    <p>本ページはGitHub Pagesで構築されてますので、修正・加筆等あればお気軽にPushください。</p>
+
+    <h2 id="ID_CONTENTS">目次</h2>
+    <div id="ID_CONTENTS_LIST"></div>
+
+    <h2>ウェブページで見かける入力フォームの例</h2>
+    <p>今回紹介するのはこちらの入力フォームです。サンプルなので実際使いたいものとは異なるかもしれませんがそこはアレンジしてください。</p>
+    <p>この入力フォームは<b>テキストコピーボタン</b>を押すと、<b>上部の入力ボックスの内容が下部の入力ボックスにコピー</b>されます。
+      そして、<b>リセットボタン</b>を押すと初期状態にもどります。
+      ボタンはbuttonタグで、入力ボックスはinputタグで作成しました。</p>
+
+
+    <p class="caption">サンプルフォーム</p>
+    <form >
+      <input type="text" name="textbox1" value="ここの値をコピーします。"><br>
+      <input type="text" name="textbox2"><br>
+      <button type="button" onclick="textbox2.value=textbox1.value;">テキストコピー</button>
+      <button type="reset">リセット</button>
+    </form>
+
+    <p class="caption">サンプルフォームHTML</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;form&gt;
+  &lt;input type="text" name="textbox1" value="ここの値をコピーします。"&gt;&lt;br&gt;
+  &lt;input type="text" name="textbox2"&gt;&lt;br&gt;
+  &lt;button type="button" onclick="textbox2.value=textbox1.value;"&gt;テキストコピー&lt;/button&gt;
+  &lt;button type="reset"&gt;リセット&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <h2>Inputタグ</h2>
+    <p><b>Inputタグ</b>を使うと入力ボックスを作ることができます。
+      typeには入力形式を入れておきます。これは種類がたくさんありますので、今回は<b>textタイプ</b>のみを説明します。
+      value属性に文字を入れておけば初期状態としてその文字を表示することができます。入れておくことも可能ですし、
+    何も入れておかないこともできます。</p>
+    <p class="caption">Inputサンプル</p>
+    <form >
+      <input type="text" name="textbox1" value="ここの値をコピーします。"><br>
+    </form>
+    <p class="caption">Inputタグサンプルコード</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;form&gt;
+<span class="red">&lt;input type="text" name="textbox1" value="ここの値をコピーします。"&gt;</span>&lt;br&gt;
+&lt;input type="text" name="textbox2"&gt;&lt;br&gt;
+&lt;button type="button" onclick="textbox2.value=textbox1.value;"&gt;テキストコピー&lt;/button&gt;
+&lt;button type="reset"&gt;リセット&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <h2>InputタグType一覧</h2>
+    <p>詳細説明は省きますが、様々なタイプの入力ボックスを生成することができます。試しに使ってみてください。</p>
+    <form>
+      <label>リセットボタン：</label> <input type="reset" value="Reset">
+      <p class="caption">type一覧</p>
+      <table>
+        <tr>
+          <th>type</th><th>HTML</th><th>Sample</th>
+        </tr>
+        <tr><td>button</td><td>type="button"</td><td><input type="button" value="Button"></td></tr>
+        <tr><td>checkbox</td><td>type="checkbox"</td><td><input type="checkbox"></td></tr>
+        <tr><td>color</td><td>type="color"</td><td><input type="color"></td></tr>
+        <tr><td>date</td><td>type="date"</td><td><input type="date"></td></tr>
+        <tr><td>datetime-local</td><td>type="datetime-local"</td><td><input type="datetime-local"></td></tr>
+        <tr><td>email</td><td>type="email"</td><td><input type="email" value="sample@mail.com"></td></tr>
+        <tr><td>file</td><td>type="file"</td><td><input type="file"></td></tr>
+        <tr><td>hidden</td><td>type="hidden"</td><td><input type="hidden"></td></tr>
+        <tr><td>image</td><td>type="image"</td><td><input type="image" src="../../../icon/ミニフィグ01.jpg" height="48"></td></tr>
+        <tr><td>month</td><td>type="month"</td><td><input type="month"></td></tr>
+        <tr><td>number</td><td>type="number"</td><td><input type="number" value="1234"></td></tr>
+        <tr><td>password</td><td>type="password"</td><td><input type="password" value="sample"></td></tr>
+        <tr><td>radio</td><td>type="radio"</td><td><input type="radio"></td></tr>
+        <tr><td>range</td><td>type="range"</td><td><input type="range"></td></tr>
+        <tr><td>reset</td><td>type="reset"</td><td><input type="reset" value="Reset"></td></tr>
+        <tr><td>search</td><td>type="search"</td><td><input type="search" value="sample"></td></tr>
+        <tr><td>submit</td><td>type="submit"</td><td><input type="submit" value="Submit"></td></tr>
+        <tr><td>tel</td><td>type="tel"</td><td><input type="tel" value="0123-456-789"></td></tr>
+        <tr><td>text</td><td>type="text"</td><td><input type="text" value="sample"></td></tr>
+        <tr><td>time</td><td>type="time"</td><td><input type="time"></td></tr>
+        <tr><td>url</td><td>type="url"</td><td><input type="url" value="https://lego-san.github.io/"></td></tr>
+        <tr><td>week</td><td>type="week"</td><td><input type="week"></td></tr>
+      </table>
+      <label>リセットボタン：</label><input type="reset" value="Reset">
+    </form>
+
+    <h2>Buttonタグ</h2>
+    <p><b>Buttonタグ</b>を使うと<b>ボタン</b>を作ることができます。
+      typeの種類は<b>button/reset/submitの3種類</b>ありますが、今回は基本となるbuttonとresetの説明をします。
+      ボタンの表面に表示されるラベルはvalueに記載します。ボタンの名称はnameに記載します。
+      <b>イベント処理のonclickと組み合わせることでボタン押下時の処理</b>を記載することもできます。こちらは次章で説明します。</p>
+    <p class="caption">Buttoサンプル</p>
+    <form >
+      <input type="button" name="button" value="サンプルボタン"><br>
+    </form>
+    <p class="caption">Buttonタグサンプルコード</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;form&gt;
+&lt;input type="text" name="textbox1" value="ここの値をコピーします。"&gt;&lt;br&gt;
+&lt;input type="text" name="textbox2"&gt;&lt;br&gt;
+<span class="red">&lt;button type="button" onclick="textbox2.value=textbox1.value;"&gt;テキストコピー&lt;/button&gt;</span>
+<span class="red">&lt;button type="reset"&gt;リセット&lt;/button&gt;</span>
+&lt;/form&gt;</code></pre>
+
+    <h2>イベント処理</h2>
+    <p>前章で触れたように、<b>onclick</b>を設定すると、ボタン押下時に<b>イベント処理</b>をすることができます。
+      下記のサンプルではボタンを押したときに、textbox1の値をtextbox2に入力する処理を実装しています。</p>
+    <p class="caption">Buttonイベントサンプルコード</p>
+    <pre class="code01" style="padding: 10px;"><code>&lt;form&gt;
+&lt;input type="text" <b>name="textbox1"</b> value="ここの値をコピーします。"&gt;&lt;br&gt;
+&lt;input type="text" <b>name="textbox2"</b>&gt;&lt;br&gt;
+&lt;button type="button" <span class="red">onclick="textbox2.value=textbox1.value;"</span>&gt;テキストコピー&lt;/button&gt;
+&lt;button type="reset"&gt;リセット&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <p class="caption">サンプルフォーム</p>
+    <form >
+      <input type="text" name="textbox1" value="ここの値をコピーします。"><br>
+      <input type="text" name="textbox2"><br>
+      <button type="button" onclick="textbox2.value=textbox1.value;">テキストコピー</button>
+      <button type="reset">リセット</button>
+    </form>
+
+    <h2>リセット処理</h2>
+    <p><b>Buttonタグのtypeにresetを設定</b>すると、<b>リセット</b>が行われます。
+      リセットすると各タグのデータが初期値(=valueで設定した値)に戻ります。
+      ただし、このリセットの有効範囲はformタグ内だけですので注意してください。</p>
+    <p class="caption">リセットサンプルコード</p>
+    <pre class="code01" style="padding: 10px;"><code><b>&lt;form&gt;</b>
+&lt;input type="text" name="textbox1" value="ここの値をコピーします。"&gt;&lt;br&gt;
+&lt;input type="text" name="textbox2"&gt;&lt;br&gt;
+&lt;button type="button" onclick="textbox2.value=textbox1.value;"&gt;テキストコピー&lt;/button&gt;
+<span class="red">&lt;button type="reset"&gt;リセット&lt;/button&gt;</span>
+<b>&lt;/form&gt;</b></code></pre>
+
+    <p class="caption">サンプルフォーム</p>
+    <form >
+      <input type="text" name="textbox1" value="ここの値をコピーします。"><br>
+      <input type="text" name="textbox2"><br>
+      <button type="button" onclick="textbox2.value=textbox1.value;">テキストコピー</button>
+      <button type="reset">リセット</button>
+    </form>
+
+    <h2 id="ID_COMMENT">感想</h2>
+    <p>ブラウザの種類やバージョンによってサポートしていない機能もあるかもしれません。想定されるブラウザで試して使ってみてください。</p>
+
+    <div id="ID_FOOTER"></div>
+
+    <script>
+      create_contents_list("ID_CONTENTS_LIST");
+      create_footer("ID_FOOTER",3);
+    </script>
+
+  </body>
+</html>
