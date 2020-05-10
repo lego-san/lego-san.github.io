@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="ID_HTML" prefix="og: http://ogp.me/ns#" lang="ja" dir="ltr">
+<html prefix="og: http://ogp.me/ns#" lang="ja" dir="ltr">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164123953-2"></script>
     <script>
@@ -21,34 +21,35 @@
     <meta property="og:site_name" content="【レゴ研鑽】Legoで遊びながら学ぶ">
     <script data-ad-client="ca-pub-1887985620435579" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
-  <body id="ID_BODY">
-    <div class="top_area">
+  <body>
+    <div id="ID_HEADER" class="top_area">
       <h1 class="page_title" id="ID_TITLE">【レゴ研鑽】<br>レゴで遊ぼう、学ぼう</h1>
     </div>
-    <div id="ID_CONTENTS" class="contents_area">
+    <div id="ID_CONTENTS">
       <table style="border: 0px;">
         <tr>
-          <td style="width: 20%; border:0px;">
-            <img class="circle" width=100% src="./icon/先生01.jpg" alt="レゴの写真">
+          <td style="width: 200px; border:0px; padding-right: 5px;">
+            <img class="circle" width=100% src="./icon/先生01.jpg" alt="レゴ先生">
           </td>
-          <td style="width: 80%; border:0px;">
-            <p id="ID_P">Lego作品とレゴアニメーションを紹介してます。
-              また、レゴを通じて学習したプログラミング技術(HTML、avaScript、Python、Githubなど)を紹介してます。
-              プログラミングは初心者から中級者向けの情報です。<br>楽しんで頂ければ幸いです。</p>
+          <td style="border:0px;">
+            <p>子供と遊んだときに撮ったレゴの写真を<b style="font-size:30px;">Lego作品</b>を紹介してます。
+              また、本ホームページを作成しながら学んだ<b>ウェブプログラミング</b>のノウハウ
+              (HTML,JavaScript、Python、Githubなど)も紹介してます。
+              <br>楽しんで頂ければ幸いです。</p>
           </td>
         </tr>
       </table>
       <hr>
-      <div id="ID_TABS" class="tabs">
+      <div id="ID_TABS" class="tabs" style="padding-bottom: 50px;">
         <input id="ID_TAB01" type="radio" name="tab_item" checked>
         <label id="ID_TAB_NAME" class="tab_item" for="ID_TAB01">レゴ研鑽1：遊ぼう</label>
         <input id="ID_TAB02" type="radio" name="tab_item">
         <label class="tab_item" for="ID_TAB02">レゴ研鑽2：学ぼう</label>
 
-        <div class="tab_content" id="ID_TAB01_CONTENTS">
+        <div id="ID_TAB01_CONTENTS" class="tab_content">
           <div class="tab_content_description">
             <h2>レゴで遊ぼうコンテンツ</h2>
-            <table align="center" style="width:80%;">
+            <table align="center" style="width:95%;">
               <tbody>
                 <tr>
                     <th style="width: 30%;">レゴ写真館</th>
@@ -56,9 +57,9 @@
                     <th style="width: 30%;">レゴアニメーション</th>
                 </tr>
                 <tr>
-                  <td><a href="./contents/images/minifigs/minifigs.html"><img width=100% src="./icon/ミニフィグ01.jpg" alt="ミニフィグ"></a></td>
-                  <td><a href="./contents/images/pictures/pictures.html"><img width=100% src="./icon/作品01.jpg" alt="レゴ作品"></a></td>
-                  <td><a href="./contents/animations/index.html"><img width=100% src="./contents/animations/gif/フェイス01.gif" alt="フェイス"></a></td>
+                  <td style="background-color: black;"><a href="./contents/images/minifigs/minifigs.html"><img width=100% src="./icon/ミニフィグ01.jpg" alt="ミニフィグ"></a></td>
+                  <td style="background-color: black;"><a href="./contents/images/pictures/pictures.html"><img width=100% src="./icon/作品01.jpg" alt="レゴ作品"></a></td>
+                  <td style="background-color: black;"><a href="./contents/animations/index.html"><img width=100% src="./contents/animations/gif/フェイス01.gif" alt="フェイス"></a></td>
                 </tr>
                 <tr>
                   <td style="text-align:center;"><a href="./contents/images/minifigs/minifigs.html">入口</a></td>
@@ -73,7 +74,7 @@
         <div class="tab_content" id="ID_TAB02_CONTENTS">
           <div class="tab_content_description">
             <h2>レゴで学ぼうコンテンツ</h2>
-            <table align="center" style="width:80%;">
+            <table align="center" style="width:95%;">
               <tbody>
                 <tr>
                     <th style="width: 30%;">HTMLを学ぶ</th>
@@ -98,6 +99,9 @@
       </div><!--ID_TABS-->
     </div><!--ID_CONTENTS-->
 
+    <script type="text/javascript">
+      document.getElementById("ID_CONTENTS").style.marginTop = document.getElementById("ID_HEADER").clientHeight + "px";
+    </script>
     <div>
       <hr><br><br>
       <p id="ID_FOOTER" class="guide_area_bottom">[<a href="#ID_CONTENTS">ページ上に戻る</a>] / [<a href="./privacy_policy/index.html">プライバシーポリシー</a>] / [<a href="https://docs.google.com/forms/d/e/1FAIpQLSez3uVXuSNpk3o6D9FngnFNTqTfs0DZeaFhKLTO_GNxZ-P9gg/viewform">お問い合わせ</a>]</p>

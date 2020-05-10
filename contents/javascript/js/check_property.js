@@ -54,13 +54,13 @@ function check_window_size(id){
 
   items = table.createTHead().insertRow(-1);
   items.insertCell(-1).innerHTML = "HTML tag size";
-  items.insertCell(-1).innerHTML = window.getComputedStyle(document.getElementsByTagName("HTML")[0]).getPropertyValue("height") + "px";
-  items.insertCell(-1).innerHTML = window.getComputedStyle(document.getElementsByTagName("HTML")[0]).getPropertyValue("width") + "px";
+  items.insertCell(-1).innerHTML = window.getComputedStyle(document.getElementsByTagName("HTML")[0]).getPropertyValue("height");
+  items.insertCell(-1).innerHTML = window.getComputedStyle(document.getElementsByTagName("HTML")[0]).getPropertyValue("width");
 
   items = table.createTHead().insertRow(-1);
   items.insertCell(-1).innerHTML = "BODY tag size";
-  items.insertCell(-1).innerHTML = window.getComputedStyle(document.getElementsByTagName("BOdY")[0]).getPropertyValue("height") + "px";
-  items.insertCell(-1).innerHTML = window.getComputedStyle(document.getElementsByTagName("BODY")[0]).getPropertyValue("width") + "px";
+  items.insertCell(-1).innerHTML = window.getComputedStyle(document.getElementsByTagName("BOdY")[0]).getPropertyValue("height");
+  items.insertCell(-1).innerHTML = window.getComputedStyle(document.getElementsByTagName("BODY")[0]).getPropertyValue("width");
 
   obj.appendChild(table);
   obj.appendChild(document.createElement("BR"));
@@ -156,4 +156,10 @@ function check_all_property(id){
   check_tag_position(id);
   check_navigator_property(id);
   check_location_property(id);
+}
+
+function set_window_size(width){
+  size = "toolbar=yes, " + "width=" + width + ", " + "height=" + window.innerHeight;
+  myWindow = window.open(location.href, "", size);
+  myWindow.focus();
 }

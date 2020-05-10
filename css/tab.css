@@ -1,13 +1,9 @@
-.tabs {
-  padding-bottom: 40px;
-}
-
 .tab_item {
-  width: calc(100%/2);
+  width: 50%;
   height: 50px;
   background-color: #DDDDDD;
   line-height: 50px;
-  font-size: 30px;
+  font-size: 34px;
   text-align: center;
   color: #555555;
   display: block;
@@ -39,6 +35,7 @@ input[name="tab_item"] {
 }
 
 .tabs input:checked + .tab_item {
-  background-color: #FF0000;
-  color: #FFFF00;
+  background-color: #FF9900;
+  color: #000000;
+  border-style: none none outset none;
 }

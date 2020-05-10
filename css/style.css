@@ -38,11 +38,6 @@ table, th, td {
   border-right: solid 30px #FF9900;
 }
 
-.contents_area{
-  margin: 130px 0px 0px 0px;
-  margin: 230px 0px 0px 0px;
-}
-
 .guide_area_bottom {
   position: fixed;
   bottom: 0;
