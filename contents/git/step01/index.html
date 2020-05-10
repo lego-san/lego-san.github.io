@@ -4,25 +4,45 @@
     <link rel="stylesheet" href="../../../css/style.css">
     <meta charset="utf-8">
     <title>困ったときのGit Branchコマンド確認</title>
+    <script type="text/javascript" src="../../../js/common.js"></script>
   </head>
   <body>
     <h1 id="ID_H1">Git Branchコマンドの使い方</h1>
+
     <h2 id="ID_CONTENTS">目次</h2>
+    <div id="ID_CONTENTS_LIST"></div>
 
     <h2>ブランチ操作のヘルプ確認方法</h2>
     <pre class="code01"><code>git branch -h</code></pre>
 
-    <h2>レポジトリの削除</h2>
+    <h2>ブランチの削除</h2>
     <pre class="code01"><code>git branch -d [ブランチ名]</code></pre>
     <pre class="code01"><code>git branch --delete [ブランチ名]</code></pre>
 
-    <h2>レポジトリの強制削除</h2>
+    <h2>ブランチの強制削除</h2>
     <pre class="code01"><code>git branch -D [ブランチ名]</code></pre>
 
-    <div>
-      <hr><br><br>
-      <p class="guide_area_bottom">[<a href="#ID_H1">ページ上に戻る</a>] / [<a href="#ID_CONTENTS">目次に戻る</a>] / [<a href="../../index.html">HOMEへ戻る</a>]</p>
-    </div>
+    <h2>リモートレポジトリの追加</h2>
+    <pre class="code01"><code>git remote add origin [レポジトリ名]</code></pre>
+
+    <h2>リモートレポジトリの削除</h2>
+    <pre class="code01"><code>git remote rm origin</code></pre>
+
+    <h2>ユーザ情報確認方法</h2>
+    <pre class="code01"><code>git config -l</code></pre>
+
+    <h2>ユーザ情報設定方法</h2>
+    <pre class="code01"><code>git config --local user.name [name]<br>git config --local user.email [email]</code></pre>
+
+    <h2>ユーザ情報切り替え</h2>
+    <pre class="code01"><code>git config user.name [name]</code></pre>
+
+    <div id="ID_FOOTER"></div>
+
+    <script>
+      create_contents_list("ID_CONTENTS_LIST");
+      create_footer("ID_FOOTER",3);
+    </script>
 
   </body>
 </html>
