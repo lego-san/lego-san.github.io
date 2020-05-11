@@ -30,6 +30,12 @@ FILE_NAMES = ["キャプテンマーベル01.jpg", "キャプテンマーベル0
 FILE_NAMES = ["キャプテンマーベル01.jpg", "キャプテンマーベル02.jpg"]
 FILE_NAMES = ["スパイダーマン01.jpg"]
 FILE_NAMES = ["マインクラフト01.jpg", "マインクラフト02.jpg", "マインクラフト03.jpg"]
+FILE_NAMES = ["野菜01.jpg", "野菜02.jpg"]
+FILE_NAMES = ["花01.jpg", "花02.jpg"]
+FILE_NAMES = ["音楽01.jpg", "音楽02.jpg"]
+FILE_NAMES = ["ショッピング01.jpg", "ショッピング02.jpg", "ミニオン05.jpg"]
+FILE_NAMES = ["レゴブロック01.jpg", "レゴブロック02.jpg"]
+FILE_NAMES = ["ミニフィグ03.jpg", "ミニフィグ04.jpg", "ミニフィグ05.jpg"]
 
 
 resize_rate = 5
@@ -40,4 +46,4 @@ for FILE_NAME in FILE_NAMES:
 #    new_img = img.resize((int(img.width/10),int(img.height/10)))
 #    new_img = img.resize((int(img.width/resize_rate),int(img.height/resize_rate)))
     new_img = img.resize((int(resize_width), int(img.height / img.width * resize_width)))
-    new_img.save('./contents/images/jpg/' + FILE_NAME)
+    new_img.save('./contents/pages/images/' + FILE_NAME)
